@@ -1,0 +1,42 @@
+<figure class="theme-illustration theme-{{ direction.id }}">
+  <svg viewBox="0 0 240 160" role="img" aria-labelledby="theme-title-{{ direction.id }} theme-description-{{ direction.id }}" focusable="false">
+    <title id="theme-title-{{ direction.id }}">{{ direction.illustration.title[lang] }}</title>
+    <desc id="theme-description-{{ direction.id }}">{{ direction.illustration.description[lang] }}</desc>
+    <g aria-hidden="true">
+    {% if direction.id == 'dialogue' %}
+      <text class="theme-label" x="37" y="25">{{ direction.illustration.input[lang] }}</text>
+      <text class="theme-label" x="205" y="25">{{ direction.illustration.output[lang] }}</text>
+      <text class="theme-label" x="121" y="146">{{ direction.illustration.middle[lang] }}</text>
+      <path class="theme-outline" d="M12 53h47a4 4 0 0 1 4 4v33a4 4 0 0 1-4 4H34l-9 8v-8H12a4 4 0 0 1-4-4V57a4 4 0 0 1 4-4ZM188 53h34a4 4 0 0 1 4 4v33a4 4 0 0 1-4 4h-8v8l-9-8h-17a4 4 0 0 1-4-4V57a4 4 0 0 1 4-4Z"/>
+      <path class="theme-detail" d="M19 65h32M19 74h24M19 83h28M194 65h22M194 74h18M194 83h22"/>
+      <path class="theme-connection" d="M63 74h25l16-21h33l23 21h24M88 74l16 31h33l23-31M104 53l33 52M137 53l-33 52M104 53v52M137 53v52"/>
+      <path class="theme-signal" d="M63 74h25l16-21h33l23 21h24" pathLength="1"/>
+      <path class="theme-signal theme-signal-later" d="M88 74l16 31h33l23-31" pathLength="1"/>
+      <circle class="theme-node" cx="104" cy="53" r="6"/><circle class="theme-node theme-node-second" cx="137" cy="53" r="6"/><circle class="theme-node theme-node-third" cx="104" cy="105" r="6"/><circle class="theme-node theme-node-fourth" cx="137" cy="105" r="6"/>
+      <path class="theme-emphasis" d="M194 83h22"/>
+    {% elsif direction.id == 'decisions' %}
+      <text class="theme-label" x="38" y="25">{{ direction.illustration.input[lang] }}</text>
+      <text class="theme-label" x="122" y="146">{{ direction.illustration.middle[lang] }}</text>
+      <text class="theme-label" x="205" y="25">{{ direction.illustration.output[lang] }}</text>
+      <g class="theme-outline"><rect x="9" y="45" width="53" height="17" rx="2"/><rect x="9" y="72" width="53" height="17" rx="2"/><rect x="9" y="99" width="53" height="17" rx="2"/><circle cx="122" cy="80" r="20"/></g>
+      <path class="theme-detail" d="M19 53.5h32M19 80.5h32M19 107.5h32M113 72h18M113 80h18M113 88h18"/>
+      <path class="theme-connection" d="M62 53.5h16l25 22M62 80.5h40M62 107.5h16l25-22M142 80h20l20-23h42M162 80h62M162 80l20 23h42"/>
+      <path class="theme-signal" d="M62 53.5h16l25 22M62 80.5h40M62 107.5h16l25-22" pathLength="1"/>
+      <path class="theme-signal theme-signal-later" d="M142 80h20l20-23h42M162 80h62M162 80l20 23h42" pathLength="1"/>
+      <circle class="theme-node" cx="122" cy="80" r="4"/>
+      <path class="theme-emphasis" d="M184 57h40M184 80h40M184 103h40"/>
+    {% else %}
+      <text class="theme-label" x="37" y="25">{{ direction.illustration.input[lang] }}</text>
+      <text class="theme-label" x="123" y="146">{{ direction.illustration.middle[lang] }}</text>
+      <text class="theme-label" x="205" y="146">{{ direction.illustration.output[lang] }}</text>
+      <g class="theme-outline"><rect x="14" y="41" width="39" height="45" rx="2"/><rect x="14" y="98" width="39" height="27" rx="2"/><circle cx="202" cy="77" r="18"/></g>
+      <path class="theme-detail" d="M23 53h21M23 62h21M23 71h14M18 120l10-12 9 7 6-6 7 11M215 90l13 15"/>
+      <path class="theme-connection" d="M53 64h24l23-17 42 14 9 43-43 9-8-66 51 57M53 112h25l30 1 34-52M142 61l42 16M151 104l33-27"/>
+      <path class="theme-signal" d="M53 64h24l23-17 42 14 42 16" pathLength="1"/>
+      <path class="theme-signal theme-signal-later" d="M53 112h25l30 1 43-9 33-27" pathLength="1"/>
+      <circle class="theme-node" cx="100" cy="47" r="5"/><circle class="theme-node theme-node-second" cx="142" cy="61" r="5"/><circle class="theme-node theme-node-third" cx="108" cy="113" r="5"/><circle class="theme-node theme-node-fourth" cx="151" cy="104" r="5"/>
+      <path class="theme-emphasis" d="M193 73h17M193 81h12"/>
+    {% endif %}
+    </g>
+  </svg>
+</figure>

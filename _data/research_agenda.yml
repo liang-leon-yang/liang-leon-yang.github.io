@@ -41,7 +41,29 @@
             "zh": "识别支持需求"
           }
         }
-      ]
+      ],
+      "illustration": {
+        "title": {
+          "en": "From expression to empathetic response",
+          "zh": "从情绪表达走向共情回应"
+        },
+        "description": {
+          "en": "A help-seeking expression connects to four agents exchanging information, followed by a response. Moving signals illustrate coordination, rather than actual model output.",
+          "zh": "求助表达连接到相互交换信息的四个智能体，再连接到回应。移动信号示意协同过程。"
+        },
+        "input": {
+          "en": "Expression",
+          "zh": "情绪表达"
+        },
+        "middle": {
+          "en": "Agent exchange",
+          "zh": "智能体协同"
+        },
+        "output": {
+          "en": "Response",
+          "zh": "共情回应"
+        }
+      }
     },
     {
       "id": "decisions",
@@ -72,7 +94,29 @@
             "zh": "可解释再入院风险"
           }
         }
-      ]
+      ],
+      "illustration": {
+        "title": {
+          "en": "Connecting health predictions with their basis",
+          "zh": "连接健康预测与解释依据"
+        },
+        "description": {
+          "en": "Observed factors connect to a model prediction and a set of explanatory factors. Equal-length marks are illustrative and carry no numerical importance or clinical result.",
+          "zh": "观测因素连接到模型预测及其解释依据；等长线条仅表示解释要素，不代表重要性数值或临床结果。"
+        },
+        "input": {
+          "en": "Observations",
+          "zh": "观测因素"
+        },
+        "middle": {
+          "en": "Prediction",
+          "zh": "模型预测"
+        },
+        "output": {
+          "en": "Explanation",
+          "zh": "解释依据"
+        }
+      }
     },
     {
       "id": "information",
@@ -103,7 +147,41 @@
             "zh": "基于图证据的推理"
           }
         }
-      ]
+      ],
+      "illustration": {
+        "title": {
+          "en": "Connecting online claims with knowledge evidence",
+          "zh": "连接网络主张与知识证据"
+        },
+        "description": {
+          "en": "Text and image claims connect with a knowledge graph and an assessment step. Moving signals illustrate evidence connections without assigning a true or false verdict.",
+          "zh": "文本和图像中的主张连接知识图谱，再进入比对评估；移动信号示意证据关联，不给出真伪判定。"
+        },
+        "input": {
+          "en": "Text + image",
+          "zh": "文本与图像"
+        },
+        "middle": {
+          "en": "Knowledge",
+          "zh": "知识证据"
+        },
+        "output": {
+          "en": "Assessment",
+          "zh": "比对评估"
+        }
+      }
     }
-  ]
+  ],
+  "illustration_note": {
+    "en": "Conceptual illustrations of the research themes.",
+    "zh": "研究主题示意。"
+  },
+  "pause": {
+    "en": "Pause illustrations",
+    "zh": "暂停示意"
+  },
+  "play": {
+    "en": "Play illustrations",
+    "zh": "播放示意"
+  }
 }

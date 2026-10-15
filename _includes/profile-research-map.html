@@ -2,32 +2,30 @@
 <section class="research-map" aria-labelledby="research-map-title" data-research-map>
   <div class="section-heading">
     <h2 id="research-map-title">{{ t.research }}</h2>
-    <button class="agenda-reset" type="button" aria-pressed="true" hidden>{{ agenda.all[lang] }}</button>
+    <div class="agenda-controls">
+      <button class="illustration-toggle" type="button" data-pause-label="{{ agenda.pause[lang] }}" data-play-label="{{ agenda.play[lang] }}" data-paused="false" hidden><svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true" focusable="false"><path class="illustration-pause-icon" d="M5 3v10M11 3v10" fill="none" stroke="currentColor" stroke-width="1.5"/><path class="illustration-play-icon" d="m5 3 8 5-8 5Z" fill="currentColor"/></svg><span>{{ agenda.pause[lang] }}</span></button>
+      <button class="agenda-reset" type="button" aria-pressed="true" hidden>{{ agenda.all[lang] }}</button>
+    </div>
   </div>
-  <div class="agenda-layout">
-    <svg class="agenda-flow" aria-hidden="true" focusable="false"></svg>
-    <div class="agenda-origin">
-      <p class="agenda-origin-title">{{ agenda.title[lang] }}</p>
-      <p>{{ agenda.context[lang] }}</p>
-    </div>
-    <div class="agenda-branches">
-      {% for direction in agenda.directions %}
-      <article class="agenda-branch" data-direction="{{ direction.id }}">
-        <div class="agenda-question">
-          <span class="agenda-number" aria-hidden="true">0{{ forloop.index }}</span>
-          <h3><span class="agenda-static-title">{{ direction.title[lang] }}</span><button class="agenda-select" type="button" aria-pressed="false" hidden>{{ direction.title[lang] }}</button></h3>
-          <p>{{ direction.question[lang] }}</p>
-        </div>
-        <div class="agenda-evidence">
-          <p class="agenda-methods">{{ direction.methods[lang] }}</p>
-          <ul class="agenda-papers">
-            {% for reference in direction.papers %}{% assign paper = p.publications | where: 'id', reference.id | first %}
-            <li><a href="{{ prefix | append: '/publications/' | relative_url }}#paper-{{ paper.id }}" title="{{ paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>
-            {% endfor %}
-          </ul>
-        </div>
-      </article>
-      {% endfor %}
-    </div>
+  <p class="agenda-note">{{ agenda.illustration_note[lang] }}</p>
+  <div class="agenda-branches">
+    {% for direction in agenda.directions %}
+    <article class="agenda-branch" data-direction="{{ direction.id }}">
+      {% include research-theme-illustration.html %}
+      <div class="agenda-question">
+        <span class="agenda-number" aria-hidden="true">0{{ forloop.index }}</span>
+        <h3><span class="agenda-static-title">{{ direction.title[lang] }}</span><button class="agenda-select" type="button" aria-pressed="false" hidden>{{ direction.title[lang] }}</button></h3>
+        <p>{{ direction.question[lang] }}</p>
+      </div>
+      <div class="agenda-evidence">
+        <p class="agenda-methods">{{ direction.methods[lang] }}</p>
+        <ul class="agenda-papers">
+          {% for reference in direction.papers %}{% assign paper = p.publications | where: 'id', reference.id | first %}
+          <li><a href="{{ prefix | append: '/publications/' | relative_url }}#paper-{{ paper.id }}" title="{{ paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </article>
+    {% endfor %}
   </div>
 </section>
