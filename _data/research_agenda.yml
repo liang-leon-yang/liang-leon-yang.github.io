@@ -1,0 +1,109 @@
+{
+  "title": {
+    "en": "AI for health",
+    "zh": "面向健康的人工智能"
+  },
+  "context": {
+    "en": "Health & online communities",
+    "zh": "健康与在线社区"
+  },
+  "all": {
+    "en": "All directions",
+    "zh": "全部方向"
+  },
+  "directions": [
+    {
+      "id": "dialogue",
+      "title": {
+        "en": "Empathetic conversational AI",
+        "zh": "共情对话智能"
+      },
+      "question": {
+        "en": "How can AI understand emotions and respond to support needs?",
+        "zh": "AI 如何理解情绪，并回应人们的支持需求？"
+      },
+      "methods": {
+        "en": "Multi-agent learning · Contrastive learning",
+        "zh": "多智能体学习 · 对比学习"
+      },
+      "papers": [
+        {
+          "id": "empathy",
+          "label": {
+            "en": "Emotion-aware dialogue",
+            "zh": "情绪感知对话"
+          }
+        },
+        {
+          "id": "support",
+          "label": {
+            "en": "Inferring support needs",
+            "zh": "识别支持需求"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decisions",
+      "title": {
+        "en": "Explainable health analytics",
+        "zh": "可解释健康分析"
+      },
+      "question": {
+        "en": "How can health predictions reveal the evidence behind a decision?",
+        "zh": "如何让健康预测呈现决策背后的依据？"
+      },
+      "methods": {
+        "en": "Bayesian networks · SHAP explanations",
+        "zh": "贝叶斯网络 · SHAP 解释"
+      },
+      "papers": [
+        {
+          "id": "bayesian",
+          "label": {
+            "en": "Coronary heart disease prediction",
+            "zh": "冠心病风险预测"
+          }
+        },
+        {
+          "id": "readmission",
+          "label": {
+            "en": "Interpretable readmission risk",
+            "zh": "可解释再入院风险"
+          }
+        }
+      ]
+    },
+    {
+      "id": "information",
+      "title": {
+        "en": "Knowledge-driven information integrity",
+        "zh": "知识驱动信息治理"
+      },
+      "question": {
+        "en": "How can knowledge help assess mental health information online?",
+        "zh": "如何借助知识，辨识网络上的心理健康信息？"
+      },
+      "methods": {
+        "en": "Multimodal learning · Graph evidence",
+        "zh": "多模态学习 · 图证据"
+      },
+      "papers": [
+        {
+          "id": "misinformation",
+          "label": {
+            "en": "Mental health misinformation",
+            "zh": "心理健康错误信息"
+          }
+        },
+        {
+          "id": "graph",
+          "label": {
+            "en": "Reasoning with graph evidence",
+            "zh": "基于图证据的推理"
+          }
+        }
+      ]
+    }
+  ]
+}
