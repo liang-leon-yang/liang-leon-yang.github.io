@@ -28,7 +28,7 @@ Selected research uses figures extracted from the actual papers, with source rec
 
 The homepage showcases the five selected papers. The Research page and printed CV include every publication in the profile data, preserving complete titles, author lists, venues, years, review stages, author roles, and available overviews. Research navigation lists under-review/revision papers, journal articles, working papers, and conference papers in that order. Layout or animation changes must not reduce the scope of displayed research content.
 
-The profile photo is the user-provided coastal portrait at `images/portrait-coast.jpg`, used by the bilingual homepage and legacy author profile. Keep the supplied image unchanged; the face and upper body are framed with CSS in `.profile-avatar img`.
+The profile photo is the user-provided headshot at `images/portrait.png`, used by the bilingual homepage and legacy author profile. Keep the supplied image unchanged; `.profile-avatar img` centers it without additional scaling.
 
 Selected papers have bilingual `overview.en` / `overview.zh` fields in `_data/profile.yml`. These editorial research introductions appear in native expandable details on the homepage and as visible text on the research page; CV entries stay concise. They are summaries, not verbatim abstracts. The introductions for `empathy`, `icis25`, `icis24night`, and `icis24support` follow the corresponding local paper abstracts. The `support` introduction follows its current title and existing homepage summary because the available local source is a review letter for an earlier version; do not attribute findings or methods from that version to the current manuscript.
 

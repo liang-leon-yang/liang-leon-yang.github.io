@@ -23,7 +23,7 @@ repository               : "liang-leon-yang/liang-leon-yang.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "person.jpg"
+  avatar           : "portrait.png"
   name             : "Liang Yang"
   pronouns         : # example: "she/her"  
   bio              : "PhD Candidate in Management Information Systems at Beijing Institute of Technology"

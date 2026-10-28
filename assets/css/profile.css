@@ -138,9 +138,7 @@ button { font: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 62%;
-  transform: scale(2);
-  transform-origin: 36% 62%;
+  object-position: center;
 }
 .profile-summary, .biography, .feature-copy, .paper-content { min-width: 0; }
 .biography p + p { margin-top: 12px; }
