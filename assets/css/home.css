@@ -1,39 +1,39 @@
-/* Home-specific content layout; typography, colors and page chrome live in profile.css. */
-.home-heading .home-affiliation { margin-top: 10px; font-weight: 700; }
-.page-home .profile-intro { grid-template-columns: 300px minmax(0, 1fr); gap: 44px; padding-top: 34px; }
-.profile-contact { min-width: 0; text-align: center; }
-.page-home .profile-avatar { width: 100%; height: auto; margin: 0; border-radius: 0; background: none; overflow: visible; }
-.page-home .profile-avatar img { width: 100%; height: auto; object-fit: contain; }
-.page-home .profile-links { justify-content: center; gap: 4px 8px; margin-top: 14px; font: 14px/1.65 var(--font); }
-.page-home .profile-links a { color: #333; text-decoration: underline; padding-block: 0; }
-.profile-email { margin-top: 12px; font: 15px/1.6 var(--font); overflow-wrap: anywhere; }
-.profile-email a { color: #333; text-decoration: underline; }
-.page-home .biography { margin: 3px 0 0; text-align: justify; }
-.page-home .biography p + p { margin-top: 20px; }
-.page-home .home-news { margin-top: 48px; }
-.page-home .news-list { list-style: disc; padding-left: 23px; }
-.page-home .news-item { display: list-item; margin-bottom: 12px; padding-left: 2px; }
-.page-home .news-item p { font: 16px/1.65 var(--font); overflow-wrap: normal; }
-.page-home .news-item time { color: inherit; font: inherit; white-space: nowrap; }
-.page-home .news-link { margin-left: 2px; font: inherit; text-decoration: underline; }
-html[lang="zh-CN"] .page-home .biography { font-size: 17px; line-height: 1.9; }
-@media (max-width: 900px) {
-  .page-home .profile-intro { grid-template-columns: 260px minmax(0, 1fr); gap: 32px; }
-  .page-home .biography { text-align: left; }
+/* A compact identity followed by Updates. Shared visual rules live in profile.css. */
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 88px;
+  align-items: start;
+  gap: 16px 32px;
+  padding: 40px 0 28px;
+  border-bottom: 1px solid var(--line);
 }
+.home-intro .home-heading { padding: 0; margin: 0; border: 0; min-width: 0; }
+.home-intro .home-role { margin-top: 8px; font-size: 16px; }
+.home-intro .home-affiliation { margin-top: 4px; font-size: 15px; }
+.home-intro .profile-avatar { width: 88px; height: auto; margin: 0; overflow: hidden; border-radius: 3px; background: none; }
+.home-intro .profile-avatar img { width: 100%; height: auto; object-fit: contain; }
+.home-intro .profile-links { grid-column: 1 / -1; margin: 0; gap: 8px 20px; font-size: 14px; }
+.home-intro .profile-links a { color: var(--muted); padding-block: 0; }
+.home-intro .profile-links a:hover { color: var(--link); }
+.page-home .home-news { margin-top: 28px; }
+.page-home .home-news .section-heading { margin-bottom: 16px; }
+.page-home .news-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
+.page-home .news-item { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 24px; align-items: baseline; margin: 0; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.page-home .news-item time { font: 12px/1.6 var(--mono); color: var(--muted); white-space: nowrap; }
+.page-home .news-item p { min-width: 0; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
+.page-home .news-link { margin-left: 6px; font-size: 14px; white-space: nowrap; }
 @media (max-width: 680px) {
-  .home-heading .home-affiliation { margin-top: 14px; }
-  .page-home .profile-intro { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 30px; }
-  .profile-contact { width: min(100%, 300px); justify-self: center; }
-  .page-home .profile-avatar { width: 100%; height: auto; }
-  .page-home .profile-links { margin-top: 14px; }
-  .page-home .biography { grid-column: auto; margin: 0; font-size: 15px; }
-  .page-home .home-news { margin-top: 36px; }
-  .page-home .news-item p { font-size: 15px; }
-  .page-home .news-item { margin-bottom: 14px; }
+  .home-intro { grid-template-columns: minmax(0, 1fr) 72px; gap: 14px 20px; padding: 28px 0 24px; }
+  .home-intro .home-role { font-size: 15px; }
+  .home-intro .home-affiliation { font-size: 14px; }
+  .home-intro .profile-avatar { width: 72px; height: auto; }
+  .home-intro .profile-links { gap: 8px 18px; font-size: 14px; }
+  .page-home .home-news { margin-top: 24px; }
+  .page-home .news-item { grid-template-columns: minmax(0, 1fr); gap: 5px; padding: 16px 0; }
+  .page-home .news-item p { font-size: 16px; }
 }
 @media print {
-  .page-home .profile-intro { display: block; }
-  .profile-contact { display: none; }
+  .home-intro { display: block; padding-top: 0; }
+  .home-intro .profile-avatar, .home-intro .profile-links { display: none; }
   .page-home .home-news { margin-top: 24px; }
 }
