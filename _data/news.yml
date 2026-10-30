@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-07",
+    "text": {
+      "en": "Presented research on graph evidence for mental health misinformation detection at SWAIB 2026 in Dalian, China.",
+      "zh": "在大连 SWAIB 2026 报告利用图证据检测心理健康错误信息的研究。"
+    },
+    "url": "/publications/#paper-graph"
+  },
+  {
+    "date": "2025-12",
+    "text": {
+      "en": "Presented our work on empathetic dialogue for mental health support at ICIS 2025 in Nashville, USA.",
+      "zh": "在美国纳什维尔 ICIS 2025 报告面向心理健康支持的共情对话研究。"
+    },
+    "url": "/publications/#paper-icis25"
+  },
+  {
+    "date": "2025-11-14",
+    "text": {
+      "en": "Presented our empathetic dialogue research at Philadelphia Operations and Technology Day in Wayne, Pennsylvania.",
+      "zh": "在美国宾夕法尼亚州韦恩的 Philadelphia Operations and Technology Day 报告共情对话研究。"
+    },
+    "url": "/talks/"
+  },
+  {
+    "date": "2025-10-25",
+    "text": {
+      "en": "Presented our empathetic dialogue research at the INFORMS Workshop on Data Science in Atlanta, USA.",
+      "zh": "在美国亚特兰大 INFORMS Workshop on Data Science 报告共情对话研究。"
+    },
+    "url": "/talks/"
+  },
+  {
+    "date": "2025-09-26",
+    "text": {
+      "en": "Our patent on respiratory sound classification using multi-view ensemble learning was granted (CN 119475125 B).",
+      "zh": "参与发明的「一种基于多视图集成学习的呼吸音数据分类系统」获授权（CN 119475125 B）。"
+    },
+    "url": "/cv/#patents"
+  }
+]

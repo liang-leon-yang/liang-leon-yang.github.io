@@ -1,0 +1,14 @@
+{% assign news = site.data.news | sort: 'date' | reverse %}
+{% if news.size > 0 %}
+<section class="home-news" aria-labelledby="news-title">
+  <div class="section-heading"><h2 id="news-title">{{ t.news }}</h2></div>
+  <ul class="news-list">
+    {% for item in news limit:5 %}
+    <li class="news-item">
+      <time class="date" datetime="{{ item.date }}">{{ item.date | replace: '-', '.' }}</time>
+      <p>{{ item.text[lang] | escape }}{% if item.url %} <a class="news-link" href="{{ prefix | append: item.url | relative_url }}" aria-label="{{ t.news_details }}: {{ item.text[lang] | escape }}">{{ t.news_details }} <span aria-hidden="true">↗</span></a>{% endif %}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

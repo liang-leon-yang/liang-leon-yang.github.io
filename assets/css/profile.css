@@ -150,7 +150,19 @@ button { font: inherit; }
   font-size: 15px;
 }
 .profile-links a { padding-block: 3px; }
-.home-highlights, .home-updates { margin-top: 44px; }
+.home-news { margin-top: 44px; }
+.news-list { margin: 0; padding: 0; list-style: none; }
+.news-item {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.news-item:last-child { margin-bottom: 0; }
+.news-item time { white-space: nowrap; }
+.news-item p { min-width: 0; font-size: 16px; overflow-wrap: anywhere; }
+.news-link { margin-left: 5px; font-size: 14px; white-space: nowrap; }
 .section-heading {
   display: flex;
   align-items: baseline;
@@ -335,7 +347,9 @@ button { font: inherit; }
   .biography { grid-column: 1 / -1; margin-top: 24px; }
   .profile-links { grid-column: 1 / -1; gap: 7px 20px; margin-top: 16px; }
   .site-main { font-size: 16px; }
-  .home-highlights, .home-updates { margin-top: 36px; }
+  .home-news { margin-top: 36px; }
+  .news-item { grid-template-columns: minmax(0, 1fr); gap: 3px; }
+  .news-item p { font-size: 15px; }
   .section-heading { gap: 14px; padding-bottom: 10px; margin-bottom: 22px; }
   .home-feature { grid-template-columns: 120px minmax(0, 1fr); gap: 12px 20px; margin-bottom: 28px; }
   .feature-copy { display: contents; }
@@ -403,6 +417,7 @@ button { font: inherit; }
 
 /* Research themes are explained with small, borderless moving diagrams. */
 .research-map { margin-top: 48px; }
+.page-publications .research-map { margin-top: 30px; margin-bottom: 36px; }
 .research-map .section-heading { margin-bottom: 0; }
 .agenda-controls { display: flex; align-items: center; gap: 20px; }
 .agenda-reset, .agenda-select, .illustration-toggle { padding: 0; border: 0; border-radius: 0; background: none; color: inherit; text-align: left; cursor: pointer; }
