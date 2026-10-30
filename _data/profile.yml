@@ -676,5 +676,40 @@
       "image_height": 894,
       "image_caption": "Figure 1. The AESSDL Approach vs Baseline"
     }
+  ],
+  "about": [
+    {
+      "id": "education",
+      "label": {
+        "en": "Education",
+        "zh": "教育背景"
+      },
+      "text": {
+        "en": "I am a PhD candidate in Management Science and Engineering at the School of Management, Beijing Institute of Technology, specializing in Management Information Systems. I began my doctoral studies in September 2022 and expect to complete the degree in December 2026.",
+        "zh": "我目前是北京理工大学管理学院管理科学与工程专业博士研究生，研究方向为管理信息系统。2022 年 9 月入学，预计 2026 年 12 月完成博士学位。"
+      }
+    },
+    {
+      "id": "research",
+      "label": {
+        "en": "Research",
+        "zh": "研究方向"
+      },
+      "text": {
+        "en": "My research examines how AI systems can interpret human needs, support health decisions, and assess online information quality. I focus on empathetic dialogue and social support needs in mental health, interpretable disease risk assessment, and knowledge-guided misinformation detection. My work draws on emotional intelligence, multi-agent reinforcement learning, Bayesian networks, contrastive learning, knowledge graphs, and multimodal modeling to formulate computational approaches to these information systems problems.",
+        "zh": "我的研究关注人工智能如何理解人的需求、支持健康决策并评估在线信息质量，主要围绕心理健康场景中的共情对话与社会支持需求识别、可解释疾病风险评估以及知识驱动的错误信息检测展开。在方法上，我结合情绪智能、多智能体强化学习、贝叶斯网络、对比学习、知识图谱与多模态建模，研究具体信息系统问题的计算方法。"
+      }
+    },
+    {
+      "id": "publications",
+      "label": {
+        "en": "Publications",
+        "zh": "发表成果"
+      },
+      "text": {
+        "en": "My publications include articles in Knowledge-Based Systems, Decision Support Systems, and Expert Systems with Applications, as well as conference papers at ICIS and PACIS. Two further manuscripts—on empathetic dialogue generation and implicit social support needs—are in major revision at Management Science and MIS Quarterly, respectively. These ongoing submissions are listed separately from published work in my Research record.",
+        "zh": "已有研究成果发表于 Knowledge-Based Systems、Decision Support Systems 和 Expert Systems with Applications 等期刊，并在 ICIS、PACIS 发表会议论文。此外，共情对话生成与隐含社会支持需求识别两项研究分别在 Management Science 和 MIS Quarterly 大修中，在研究成果页与已发表论文分开列示。"
+      }
+    }
   ]
 }

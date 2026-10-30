@@ -1,10 +1,4 @@
 /* Content and paper links remain readable without JavaScript. */
-const printButton = document.querySelector('.print-button');
-if (printButton) {
-  printButton.hidden = false;
-  printButton.addEventListener('click', () => window.print());
-}
-
 for (const map of document.querySelectorAll('[data-research-map]')) {
   const branches = [...map.querySelectorAll('.agenda-branch')];
   const reset = map.querySelector('.agenda-reset');

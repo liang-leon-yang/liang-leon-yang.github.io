@@ -1,11 +1,11 @@
 {
   "title": {
-    "en": "AI for health",
-    "zh": "面向健康的人工智能"
+    "en": "AI methods for digital health",
+    "zh": "数字健康中的人工智能方法"
   },
   "context": {
-    "en": "Health & online communities",
-    "zh": "健康与在线社区"
+    "en": "Mental health · Risk assessment · Information integrity",
+    "zh": "心理健康 · 风险评估 · 信息可信性"
   },
   "all": {
     "en": "All directions",
@@ -15,16 +15,16 @@
     {
       "id": "dialogue",
       "title": {
-        "en": "Empathetic conversational AI",
-        "zh": "共情对话智能"
+        "en": "Empathetic dialogue and social support",
+        "zh": "共情对话与社会支持需求建模"
       },
       "question": {
-        "en": "How can AI understand emotions and respond to support needs?",
-        "zh": "AI 如何理解情绪，并回应人们的支持需求？"
+        "en": "I develop computational methods for modeling emotional cues and implicit support needs in mental health conversations. This work combines emotional intelligence, multi-agent reinforcement learning, and answer-informed contrastive learning to study the relationship between help-seeking expressions, support needs, and response strategies.",
+        "zh": "围绕心理健康对话中的情绪线索与隐性社会支持需求，研究回应策略选择及需求识别的计算方法。结合情绪智能、多智能体强化学习与回答信息增强的对比学习，建模求助表达、支持需求与共情回应之间的关系。"
       },
       "methods": {
-        "en": "Multi-agent learning · Contrastive learning",
-        "zh": "多智能体学习 · 对比学习"
+        "en": "Emotional intelligence · Multi-agent reinforcement learning · Contrastive learning",
+        "zh": "情绪智能 · 多智能体强化学习 · 对比学习"
       },
       "papers": [
         {
@@ -68,16 +68,16 @@
     {
       "id": "decisions",
       "title": {
-        "en": "Explainable health analytics",
-        "zh": "可解释健康分析"
+        "en": "Interpretable health risk modeling",
+        "zh": "可解释健康风险建模"
       },
       "question": {
-        "en": "How can health predictions reveal the evidence behind a decision?",
-        "zh": "如何让健康预测呈现决策背后的依据？"
+        "en": "I study disease and readmission risk assessment under class imbalance, with an emphasis on interpretable model structure and prediction explanations. This research integrates LLM-guided Bayesian structure discovery, imbalance-aware learning, and SHAP-based analysis to examine coronary heart disease risk and hospital readmission.",
+        "zh": "面向疾病风险与再入院风险评估，研究类别不平衡条件下的预测建模及其解释机制。结合大语言模型引导的贝叶斯网络结构发现、不平衡学习与 SHAP 分析，考察模型结构、风险预测和解释依据之间的联系。"
       },
       "methods": {
-        "en": "Bayesian networks · SHAP explanations",
-        "zh": "贝叶斯网络 · SHAP 解释"
+        "en": "Bayesian structure learning · Imbalance-aware learning · SHAP analysis",
+        "zh": "贝叶斯结构学习 · 不平衡学习 · SHAP 分析"
       },
       "papers": [
         {
@@ -121,16 +121,16 @@
     {
       "id": "information",
       "title": {
-        "en": "Knowledge-driven information integrity",
-        "zh": "知识驱动信息治理"
+        "en": "Knowledge-grounded health information integrity",
+        "zh": "知识增强的健康信息可信性"
       },
       "question": {
-        "en": "How can knowledge help assess mental health information online?",
-        "zh": "如何借助知识，辨识网络上的心理健康信息？"
+        "en": "I investigate mental health misinformation detection by linking multimodal content to structured knowledge and graph evidence. This work examines knowledge-guided representations and graph-based reasoning for assessing online claims, with attention to the robustness of classification across content and evidence representations.",
+        "zh": "针对社交媒体中的心理健康错误信息，研究文本、图像与结构化知识之间的证据关联。结合知识引导的多模态表征与图证据推理，探索利用外部知识支持信息识别，并考察模型对不同内容及证据表达的鲁棒性。"
       },
       "methods": {
-        "en": "Multimodal learning · Graph evidence",
-        "zh": "多模态学习 · 图证据"
+        "en": "Knowledge-guided multimodal learning · Graph evidence reasoning",
+        "zh": "知识引导的多模态学习 · 图证据推理"
       },
       "papers": [
         {

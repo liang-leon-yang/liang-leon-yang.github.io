@@ -1,39 +1,51 @@
-/* A compact identity followed by Updates. Shared visual rules live in profile.css. */
+/* Home layout owns every grid position; shared typography lives in profile.css. */
 .home-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 88px;
+  grid-template-columns: minmax(0, 1fr) 144px;
+  grid-template-areas: "identity portrait" "links portrait";
   align-items: start;
-  gap: 16px 32px;
+  align-content: start;
+  gap: 16px 36px;
   padding: 40px 0 28px;
   border-bottom: 1px solid var(--line);
 }
-.home-intro .home-heading { padding: 0; margin: 0; border: 0; min-width: 0; }
+.home-intro .home-heading { grid-area: identity; padding: 0; margin: 0; border: 0; min-width: 0; }
 .home-intro .home-role { margin-top: 8px; font-size: 16px; }
 .home-intro .home-affiliation { margin-top: 4px; font-size: 15px; }
-.home-intro .profile-avatar { width: 88px; height: auto; margin: 0; overflow: hidden; border-radius: 3px; background: none; }
-.home-intro .profile-avatar img { width: 100%; height: auto; object-fit: contain; }
-.home-intro .profile-links { grid-column: 1 / -1; margin: 0; gap: 8px 20px; font-size: 14px; }
-.home-intro .profile-links a { color: var(--muted); padding-block: 0; }
+.home-intro .profile-avatar { grid-area: portrait; width: 144px; margin: 0; overflow: hidden; border-radius: 3px; }
+.home-intro .profile-avatar img { display: block; width: 100%; height: auto; object-fit: contain; }
+.home-intro .profile-links { grid-area: links; display: flex; flex-wrap: wrap; min-width: 0; gap: 8px 20px; margin: 0; font-size: 14px; }
+.home-intro .profile-links a { color: var(--muted); }
 .home-intro .profile-links a:hover { color: var(--link); }
-.page-home .home-news { margin-top: 28px; }
+.home-about { margin-top: 30px; }
+.home-about > h2 { margin-bottom: 16px; }
+.home-about .biography { max-width: 82ch; font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
+.home-about .biography p + p { margin-top: 18px; }
+.home-about .biography a { display: inline-block; white-space: nowrap; }
+.about-label { font-weight: 600; }
+.page-home .home-news { margin-top: 36px; }
 .page-home .home-news .section-heading { margin-bottom: 16px; }
 .page-home .news-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
-.page-home .news-item { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 24px; align-items: baseline; margin: 0; padding: 18px 0; border-bottom: 1px solid var(--line); }
-.page-home .news-item time { font: 12px/1.6 var(--mono); color: var(--muted); white-space: nowrap; }
-.page-home .news-item p { min-width: 0; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
-.page-home .news-link { margin-left: 6px; font-size: 14px; white-space: nowrap; }
+.page-home .news-item { display: grid; grid-template-columns: 104px minmax(0, 1fr) 64px; grid-template-areas: "date text link"; gap: 20px; align-items: start; margin: 0; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.page-home .news-item time { grid-area: date; font: 12px/1.6 var(--mono); color: var(--muted); white-space: nowrap; padding-top: 4px; }
+.page-home .news-item p { grid-area: text; min-width: 0; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
+.page-home .news-link { grid-area: link; font-size: 14px; line-height: 1.65; white-space: nowrap; padding-top: 2px; }
 @media (max-width: 680px) {
-  .home-intro { grid-template-columns: minmax(0, 1fr) 72px; gap: 14px 20px; padding: 28px 0 24px; }
+  .home-intro { grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "identity portrait" "links links"; gap: 16px 22px; padding: 28px 0 24px; }
   .home-intro .home-role { font-size: 15px; }
   .home-intro .home-affiliation { font-size: 14px; }
-  .home-intro .profile-avatar { width: 72px; height: auto; }
-  .home-intro .profile-links { gap: 8px 18px; font-size: 14px; }
-  .page-home .home-news { margin-top: 24px; }
-  .page-home .news-item { grid-template-columns: minmax(0, 1fr); gap: 5px; padding: 16px 0; }
+  .home-intro .profile-avatar { width: 88px; }
+  .home-intro .profile-links { gap: 8px 18px; }
+  .home-about { margin-top: 26px; }
+  .home-about .biography { font-size: 16px; line-height: 1.8; }
+  .page-home .home-news { margin-top: 30px; }
+  .page-home .news-item { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "date link" "text text"; gap: 8px 16px; padding: 16px 0; }
+  .page-home .news-item time, .page-home .news-link { padding-top: 0; }
   .page-home .news-item p { font-size: 16px; }
 }
 @media print {
   .home-intro { display: block; padding-top: 0; }
   .home-intro .profile-avatar, .home-intro .profile-links { display: none; }
+  .home-about { margin-top: 20px; }
   .page-home .home-news { margin-top: 24px; }
 }
