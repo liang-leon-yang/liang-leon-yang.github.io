@@ -19,8 +19,12 @@
   <meta property="og:description" content="{{ p.intro[lang] | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/images/monogram.svg' | relative_url }}" type="image/svg+xml">
-  <link rel="preload" href="{{ '/assets/fonts/source-sans-3-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {% if page.kind == 'home' %}
+  <link rel="preload" href="{{ '/assets/fonts/playfair-display-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/merriweather-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  {% else %}<link rel="preload" href="{{ '/assets/fonts/source-sans-3-regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>{% endif %}
   <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  {% if page.kind == 'home' %}<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}
   <script src="{{ '/assets/js/profile.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 <body class="academic-site page-{{ page.kind }}">
@@ -42,23 +46,24 @@
   </header>
   <main id="main" class="site-main" tabindex="-1">
   {% if page.kind == 'home' %}
+    <header class="home-heading">
+      <h1 id="profile-title">{{ p.name[lang] }}</h1>
+      <p class="home-role">{{ p.role[lang] }}</p>
+      <p class="home-affiliation">{{ p.affiliation[lang] }}</p>
+    </header>
     <section class="profile-intro" aria-labelledby="profile-title">
-      <div class="profile-summary">
-        <div class="profile-heading">
-          <h1 id="profile-title">{{ p.name[lang] }} <span class="alternate-name" lang="{% if lang == 'zh' %}en{% else %}zh-CN{% endif %}">{% if lang == 'zh' %}Liang Yang{% else %}杨亮{% endif %}</span></h1>
-          <p class="profile-role">{{ p.affiliation[lang] }}</p>
+      <div class="profile-contact">
+        <div class="profile-avatar">
+          <img src="{{ '/images/portrait.png' | relative_url }}" alt="{{ p.name[lang] }}" width="1103" height="1426" fetchpriority="high">
         </div>
-        <div class="biography"><p>{{ p.bio[lang] }}</p><p>{{ p.intro[lang] }}</p></div>
         <nav class="profile-links" aria-label="{{ t.contact }}">
-          <a href="mailto:{{ p.email }}">{{ t.email }}</a>
-          <a href="{{ p.scholar }}">Google Scholar</a>
-          <a href="{{ p.researchgate }}">ResearchGate</a>
-          <a href="{{ p.github }}">GitHub</a>
+          <a href="{{ p.scholar }}">[Google Scholar]</a>
+          <a href="{{ p.researchgate }}">[ResearchGate]</a>
+          <a href="{{ p.github }}">[GitHub]</a>
         </nav>
+        <p class="profile-email">{{ t.email }}. <a href="mailto:{{ p.email }}">{{ p.email }}</a></p>
       </div>
-      <div class="profile-avatar">
-        <img src="{{ '/images/portrait.png' | relative_url }}" alt="{{ p.name[lang] }}" width="1103" height="1426" fetchpriority="high">
-      </div>
+      <div class="biography"><p>{{ p.bio[lang] }}</p><p>{{ p.intro[lang] }}</p></div>
     </section>
     {% include profile-news.html %}
   {% else %}
