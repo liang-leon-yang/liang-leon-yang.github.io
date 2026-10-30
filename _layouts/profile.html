@@ -62,9 +62,7 @@
     <section class="home-about" aria-labelledby="about-title">
       <h2 id="about-title">{{ t.about_label }}</h2>
       <div class="biography">
-        {% for paragraph in p.about %}
-        <p id="about-{{ paragraph.id }}"><strong class="about-label">{{ paragraph.label[lang] }}{% if lang == 'zh' %}：{% else %}.{% endif %}</strong> {{ paragraph.text[lang] | escape }}{% if paragraph.id == 'publications' %} <a href="{{ prefix | append: '/publications/' | relative_url }}">{{ t.all }} <span aria-hidden="true">↗</span></a>{% endif %}</p>
-        {% endfor %}
+        <p>{{ p.about[lang] | escape }}</p>
       </div>
     </section>
     {% include profile-news.html %}

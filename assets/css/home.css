@@ -20,9 +20,6 @@
 .home-about { margin-top: 30px; }
 .home-about > h2 { margin-bottom: 16px; }
 .home-about .biography { max-width: 82ch; font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
-.home-about .biography p + p { margin-top: 18px; }
-.home-about .biography a { display: inline-block; white-space: nowrap; }
-.about-label { font-weight: 600; }
 .page-home .home-news { margin-top: 36px; }
 .page-home .home-news .section-heading { margin-bottom: 16px; }
 .page-home .news-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
