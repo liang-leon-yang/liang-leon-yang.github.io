@@ -1,58 +1,55 @@
-/* A shared research theme connects three complementary directions. */
+/* Four connected research perspectives; the complete references follow below. */
 .research-network { margin: 32px 0 36px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
-.research-network > .section-heading { align-items: center; margin-bottom: 24px; }
+.research-network > .section-heading { align-items: center; margin-bottom: 10px; }
 .research-network h2 { font-size: 22px; }
 .network-toggle { display: inline-flex; align-items: center; flex-shrink: 0; gap: 7px; padding: 5px 0; border: 0; background: none; color: var(--muted); font: 13px/1.5 var(--font); cursor: pointer; }
 .network-toggle:hover { color: var(--link); }
 .network-toggle-icon { width: 12px; text-align: center; font-size: 12px; }
-.network-root { text-align: center; font-size: 17px; font-weight: 600; }
-.network-wiring { display: block; width: 100%; height: 84px; overflow: visible; }
-.network-track { fill: none; stroke: #b6c2d2; stroke-width: 1; vector-effect: non-scaling-stroke; }
-.network-signal { display: none; fill: none; stroke: var(--link); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 8 92; vector-effect: non-scaling-stroke; }
-.network-dot, .network-hub { fill: #fff; stroke: #8c9eb6; stroke-width: 1.4; vector-effect: non-scaling-stroke; }
-.network-hub { fill: var(--link); stroke: var(--link); }
-.network-directions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
-.network-direction { min-width: 0; padding: 15px 20px 0; text-align: center; }
-.network-direction h3 { font-size: 18px; line-height: 1.45; }
-.network-direction > p { max-width: 30ch; margin: 7px auto 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
-.network-papers { margin: 13px 0 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.55; }
-.network-papers li + li { margin-top: 6px; }
-.network-papers a { overflow-wrap: anywhere; }
-.network-papers a > span { display: inline-block; }
+.path-intro { max-width: 80ch; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.path-steps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); margin: 26px 0 24px; }
+.path-step { position: relative; display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 0 5px; color: var(--muted); font-size: 15px; line-height: 1.5; text-align: center; }
+.path-step:hover { color: var(--link); text-decoration: none; }
+.path-step:not(:last-child)::before, .path-step:not(:last-child)::after { content: ""; position: absolute; top: 15px; left: 50%; width: 100%; height: 1px; background: #b6c2d2; }
+.path-step:not(:last-child)::after { background: var(--link); transform: scaleX(0); transform-origin: left; }
+.path-index { position: relative; z-index: 1; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #b6c2d2; border-radius: 50%; background: #fff; font: 12px/1 var(--mono); }
+.path-step[aria-selected="true"] { color: var(--ink); font-weight: 600; }
+.path-step[aria-selected="true"] .path-index { color: #fff; border-color: var(--link); background: var(--link); }
+.path-step.is-visited .path-index { border-color: var(--link); color: var(--link); }
+.path-step.is-visited::after { transform: scaleX(1); }
+.path-panels { display: grid; gap: 24px; border-top: 1px solid var(--line); padding-top: 22px; }
+.path-panel { min-width: 0; }
+.path-panel + .path-panel { padding-top: 22px; border-top: 1px solid var(--line); }
+.path-ready .path-panels { gap: 0; }
+.path-ready .path-panel { grid-area: 1 / 1; padding-top: 0; border-top: 0; }
+.path-ready .path-panel:not(.is-active) { visibility: hidden; pointer-events: none; }
+.path-bridge { margin-bottom: 7px; color: var(--link); font-size: 13px; line-height: 1.6; }
+.path-panel h3 { font-size: 20px; line-height: 1.45; }
+.path-summary { max-width: 88ch; margin-top: 9px; color: var(--muted); font-size: 15px; line-height: 1.75; }
+.path-papers-label { display: flex; align-items: baseline; gap: 9px; margin: 18px 0 8px; font-size: 14px; font-weight: 600; line-height: 1.5; }
+.path-papers-label .count { font-size: 12px; }
+.path-papers { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 6px 24px; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.6; }
+.path-papers a { overflow-wrap: break-word; }
+.path-papers a > span { display: inline-block; }
 @media (prefers-reduced-motion: no-preference) {
-  .network-ready .network-signal { display: block; animation: network-flow 12s linear var(--network-delay) infinite both; animation-play-state: paused; }
-  .network-ready .network-dot { animation: network-arrival 12s ease var(--network-delay) infinite both; animation-play-state: paused; }
-  .network-ready .network-direction h3 { animation: network-emphasis 12s ease var(--network-delay) infinite both; animation-play-state: paused; }
-  .network-running .network-signal, .network-running .network-dot, .network-running .network-direction h3 { animation-play-state: running; }
-  @keyframes network-flow { 0% { stroke-dashoffset: 100; opacity: 0; } 3% { opacity: .85; } 28% { stroke-dashoffset: 0; opacity: .85; } 33%, 100% { stroke-dashoffset: 0; opacity: 0; } }
-  @keyframes network-arrival { 0%, 22%, 34%, 100% { fill: #fff; stroke: #8c9eb6; } 26%, 30% { fill: var(--link); stroke: var(--link); } }
-  @keyframes network-emphasis { 0%, 22%, 34%, 100% { color: var(--ink); } 26%, 30% { color: var(--link); } }
+  .path-ready .path-step[aria-selected="true"]::after { animation: path-signal 8s linear both; animation-play-state: paused; }
+  .path-running .path-step[aria-selected="true"]::after { animation-play-state: running; }
+  .path-ready .path-panel.is-active { animation: path-reveal 220ms ease; }
+  @keyframes path-signal { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes path-reveal { from { opacity: .4; } to { opacity: 1; } }
 }
 @media (max-width: 680px) {
   .research-network { margin-block: 28px; padding-bottom: 26px; }
   .research-network > .section-heading { align-items: flex-start; gap: 12px; }
   .research-network h2 { font-size: 20px; }
   .network-toggle { font-size: 12px; }
-  .network-root { position: relative; padding-left: 28px; text-align: left; font-size: 16px; }
-  .network-root::before { content: ""; position: absolute; left: 3px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--link); }
-  .network-root::after { content: ""; position: absolute; left: 6px; top: 18px; bottom: -39px; width: 1px; background: #b6c2d2; }
-  .network-wiring { display: none; }
-  .network-directions { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 28px; }
-  .network-direction { position: relative; padding: 0 0 0 28px; text-align: left; }
-  .network-direction::before { content: ""; position: absolute; top: 9px; left: 3px; width: 8px; height: 8px; z-index: 1; border: 1.4px solid #8c9eb6; border-radius: 50%; background: #fff; }
-  .network-direction:not(:last-child)::after { content: ""; position: absolute; top: 17px; bottom: -33px; left: 6px; width: 1px; background: #b6c2d2; }
-  .network-direction > p { max-width: none; margin: 5px 0 0; }
-  .network-papers { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 9px; }
-  .network-papers li + li { margin-top: 0; }
-  @media (prefers-reduced-motion: no-preference) {
-    .network-ready .network-direction::before { animation: network-mobile-arrival 12s ease var(--network-delay) infinite both; animation-play-state: paused; }
-    .network-running .network-direction::before { animation-play-state: running; }
-    @keyframes network-mobile-arrival { 0%, 22%, 34%, 100% { background: #fff; border-color: #8c9eb6; } 26%, 30% { background: var(--link); border-color: var(--link); } }
-  }
+  .path-intro, .path-summary { font-size: 14px; }
+  .path-steps { margin: 24px 0 20px; }
+  .path-step { padding-inline: 2px; font-size: 12px; }
+  .path-panels { padding-top: 18px; }
+  .path-panel h3 { font-size: 18px; }
+  .path-papers { grid-template-columns: minmax(0,1fr); gap: 6px; }
 }
 @media (max-width: 380px) {
-  .research-network > .section-heading { flex-wrap: wrap; gap: 4px 16px; margin-bottom: 18px; }
+  .research-network > .section-heading { flex-wrap: wrap; gap: 4px 16px; }
 }
-@media print {
-  .research-network { display: none; }
-}
+@media print { .research-network { display: none; } }

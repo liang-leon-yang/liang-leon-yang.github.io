@@ -231,5 +231,249 @@
       "en": "Play animation",
       "zh": "播放动画"
     }
+  },
+  "pathway": {
+    "heading": {
+      "en": "How my research connects",
+      "zh": "研究如何相互关联"
+    },
+    "intro": {
+      "en": "Explore the questions connecting my work on digital behavior, mental health support, health decisions, and trustworthy information.",
+      "zh": "沿着数字行为、心理支持、健康决策与信息可信的问题脉络，了解现有研究之间的联系。"
+    },
+    "nav": {
+      "en": "Explore research connections",
+      "zh": "浏览研究脉络"
+    },
+    "papers_label": {
+      "en": "Related studies",
+      "zh": "相关研究"
+    },
+    "chapters": [
+      {
+        "id": "platforms",
+        "label": {
+          "en": "Platforms",
+          "zh": "数字平台"
+        },
+        "title": {
+          "en": "Digital platforms and human behavior",
+          "zh": "数字平台与人的行为"
+        },
+        "bridge": {
+          "en": "Understanding how people respond to information",
+          "zh": "从人与信息的互动出发"
+        },
+        "summary": {
+          "en": "My work on crowdfunding, livestreaming, online video, hotel booking, physician teams, and research integrity examines how information, social cues, and institutional settings relate to behavior. These studies provide an information systems perspective for the health and support questions that follow.",
+          "zh": "围绕众筹、直播、视频内容、酒店预订、医生团队与科研诚信，研究信息线索、社会互动与制度环境如何联系到人的行为。这些工作提供了信息系统的研究视角，并与后续健康场景中的需求理解和信息使用问题相连接。"
+        },
+        "papers": [
+          {
+            "id": "crowdfunding",
+            "label": {
+              "en": "Crowdfunding signals",
+              "zh": "众筹项目的信号线索"
+            }
+          },
+          {
+            "id": "commerce",
+            "label": {
+              "en": "Language in livestreaming",
+              "zh": "直播语言与销售表现"
+            }
+          },
+          {
+            "id": "ugc",
+            "label": {
+              "en": "Video UGC popularity",
+              "zh": "视频 UGC 流行度"
+            }
+          },
+          {
+            "id": "hotel",
+            "label": {
+              "en": "Cues in hotel booking",
+              "zh": "酒店预订中的边缘线索"
+            }
+          },
+          {
+            "id": "team",
+            "label": {
+              "en": "Physician teams and reputation",
+              "zh": "医生团队与声誉"
+            }
+          },
+          {
+            "id": "integrity",
+            "label": {
+              "en": "Research integrity policy",
+              "zh": "科研诚信政策演化"
+            }
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "label": {
+          "en": "Support",
+          "zh": "心理支持"
+        },
+        "title": {
+          "en": "Understanding mental health and support needs",
+          "zh": "理解心理健康与支持需求"
+        },
+        "bridge": {
+          "en": "Connecting online behavior with individual support needs",
+          "zh": "将线上行为与个体支持需求联系起来"
+        },
+        "summary": {
+          "en": "Social media posts and health questions provide different views of mental health and help-seeking. Depression detection and answer modeling connect with research on implicit support needs; empathetic dialogue work explores how AI can respond to those needs. The links below include conference studies and ongoing manuscripts.",
+          "zh": "社交媒体发帖与健康提问，从不同角度呈现心理状态与求助需求。抑郁识别和回答建模连接到隐含社会支持需求的研究，共情对话则进一步探索人工智能如何回应这些需求。相关工作包括会议论文与进行中的研究稿件。"
+        },
+        "papers": [
+          {
+            "id": "icis24night",
+            "label": {
+              "en": "Depression detection · ICIS",
+              "zh": "抑郁及症状识别 · ICIS"
+            }
+          },
+          {
+            "id": "night",
+            "label": {
+              "en": "Temporal depression detection · working paper",
+              "zh": "时间模式与抑郁识别 · 工作论文"
+            }
+          },
+          {
+            "id": "answers",
+            "label": {
+              "en": "Responses to help-seeking",
+              "zh": "求助问题的回答预测与解释"
+            }
+          },
+          {
+            "id": "icis24support",
+            "label": {
+              "en": "Support needs · ICIS",
+              "zh": "社会支持需求 · ICIS"
+            }
+          },
+          {
+            "id": "support",
+            "label": {
+              "en": "Implicit support needs · revision",
+              "zh": "隐含支持需求 · 在修"
+            }
+          },
+          {
+            "id": "icis25",
+            "label": {
+              "en": "Empathetic dialogue · ICIS",
+              "zh": "共情对话 · ICIS"
+            }
+          },
+          {
+            "id": "empathy",
+            "label": {
+              "en": "Empathetic dialogue · revision",
+              "zh": "共情对话 · 在修"
+            }
+          }
+        ]
+      },
+      {
+        "id": "health",
+        "label": {
+          "en": "Decisions",
+          "zh": "健康决策"
+        },
+        "title": {
+          "en": "Supporting interpretable health decisions",
+          "zh": "支持可解释的健康决策"
+        },
+        "bridge": {
+          "en": "From understanding needs to explaining health risks",
+          "zh": "从理解需求延伸到解释健康风险"
+        },
+        "summary": {
+          "en": "A related question is how data and models can support health decisions with understandable evidence. Coronary heart disease prediction, readmission modeling, and respiratory-sound assessment examine risk and model interpretation, while the digital therapeutics review considers technology in disease self-management.",
+          "zh": "与需求理解相联系的另一类问题，是如何让数据与模型为健康判断提供可理解的依据。冠心病预测、再入院建模与呼吸音评估关注风险及模型解释；数字疗法综述则从疾病自我管理的角度，考察技术如何支持健康实践。"
+        },
+        "papers": [
+          {
+            "id": "bayesian",
+            "label": {
+              "en": "LLM-guided Bayesian prediction",
+              "zh": "大语言模型引导的贝叶斯预测"
+            }
+          },
+          {
+            "id": "readmission",
+            "label": {
+              "en": "Interpretable readmission risk",
+              "zh": "可解释再入院风险"
+            }
+          },
+          {
+            "id": "copd",
+            "label": {
+              "en": "Respiratory-sound risk assessment",
+              "zh": "呼吸音与疾病风险评估"
+            }
+          },
+          {
+            "id": "therapeutics",
+            "label": {
+              "en": "Digital therapeutics and self-management",
+              "zh": "数字疗法与疾病自我管理"
+            }
+          }
+        ]
+      },
+      {
+        "id": "information",
+        "label": {
+          "en": "Integrity",
+          "zh": "信息可信"
+        },
+        "title": {
+          "en": "Grounding online information in evidence",
+          "zh": "以证据支持在线信息可信性"
+        },
+        "bridge": {
+          "en": "Health support also depends on reliable information",
+          "zh": "健康支持也依赖可靠的信息"
+        },
+        "summary": {
+          "en": "Reliable information connects these strands of work. Knowledge-guided multimodal learning and graph-evidence reasoning address mental health misinformation. Child-attentive video analysis studies a related content-safety problem, extending the broader interest in how AI interprets online content and supports its assessment.",
+          "zh": "可靠的信息将上述研究问题进一步联系起来。知识引导的多模态学习与图证据推理用于研究心理健康错误信息；面向儿童的短视频分析关注相关的内容安全问题，共同考察人工智能如何理解在线内容，并为内容判断提供依据。"
+        },
+        "papers": [
+          {
+            "id": "misinformation",
+            "label": {
+              "en": "Knowledge-guided misinformation detection",
+              "zh": "知识引导的错误信息检测"
+            }
+          },
+          {
+            "id": "graph",
+            "label": {
+              "en": "Graph-evidence reasoning",
+              "zh": "基于图证据的推理"
+            }
+          },
+          {
+            "id": "pacis25",
+            "label": {
+              "en": "Child-attentive video safety",
+              "zh": "面向儿童的短视频安全"
+            }
+          }
+        ]
+      }
+    ]
   }
 }
