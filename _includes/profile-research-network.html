@@ -1,0 +1,27 @@
+{% assign agenda = site.data.research_agenda %}
+<section class="research-network" aria-labelledby="research-network-title" data-research-network>
+  <div class="section-heading">
+    <h2 id="research-network-title">{{ agenda.network.heading[lang] }}</h2>
+    <button class="network-toggle" type="button" aria-pressed="false" data-pause-label="{{ agenda.network.pause[lang] }}" data-play-label="{{ agenda.network.play[lang] }}" hidden><span class="network-toggle-icon" aria-hidden="true">Ⅱ</span><span class="network-toggle-label">{{ agenda.network.pause[lang] }}</span></button>
+  </div>
+  <p class="network-root">{{ agenda.network.root[lang] }}</p>
+  <svg class="network-wiring" viewBox="0 0 960 84" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+    <g style="--network-delay: 0s"><path class="network-track" d="M480 8V32Q480 40 472 40H168Q160 40 160 48V80"/><path class="network-signal" pathLength="100" d="M480 8V32Q480 40 472 40H168Q160 40 160 48V80"/><circle class="network-dot" cx="160" cy="80" r="4"/></g>
+    <g style="--network-delay: 4s"><path class="network-track" d="M480 8V80"/><path class="network-signal" pathLength="100" d="M480 8V80"/><circle class="network-dot" cx="480" cy="80" r="4"/></g>
+    <g style="--network-delay: 8s"><path class="network-track" d="M480 8V32Q480 40 488 40H792Q800 40 800 48V80"/><path class="network-signal" pathLength="100" d="M480 8V32Q480 40 488 40H792Q800 40 800 48V80"/><circle class="network-dot" cx="800" cy="80" r="4"/></g>
+    <circle class="network-hub" cx="480" cy="8" r="4"/>
+  </svg>
+  <div class="network-directions">
+    {% for direction in agenda.directions %}
+    <article class="network-direction" style="--network-delay: {{ forloop.index0 | times: 4 }}s" aria-labelledby="network-{{ direction.id }}">
+      <h3 id="network-{{ direction.id }}">{{ direction.connection.title[lang] }}</h3>
+      <p>{{ direction.connection.summary[lang] }}</p>
+      <ul class="network-papers">
+        {% for reference in direction.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}
+        <li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>
+        {% endfor %}
+      </ul>
+    </article>
+    {% endfor %}
+  </div>
+</section>

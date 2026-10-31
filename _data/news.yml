@@ -37,5 +37,27 @@
       "en": "Our patent on respiratory sound classification using multi-view ensemble learning was granted (CN 119475125 B).",
       "zh": "参与发明的「一种基于多视图集成学习的呼吸音数据分类系统」获授权（CN 119475125 B）。"
     }
+  },
+  {
+    "date": "2025-06-06",
+    "text": {
+      "en": "Filed a patent application on explainable coronary heart disease prediction using LLM-based augmentation and causal Bayesian inference.",
+      "zh": "参与申请基于 LLM 数据增强与因果贝叶斯推断的冠心病可解释性预测方法专利。"
+    }
+  },
+  {
+    "date": "2024-12",
+    "text": {
+      "en": "Presented research on temporal patterns in social media depression detection at ICIS 2024 in Bangkok, Thailand.",
+      "zh": "在泰国曼谷 ICIS 2024 报告结合时间模式的社交媒体抑郁及其症状识别研究。"
+    },
+    "url": "/publications/#paper-icis24night"
+  },
+  {
+    "date": "2023-10-24",
+    "text": {
+      "en": "Filed a patent application on a two-stage writing feedback method for mental health help-seekers.",
+      "zh": "参与申请一种两阶段心理求助者写作反馈方法专利。"
+    }
   }
 ]

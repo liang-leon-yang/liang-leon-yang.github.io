@@ -1,12 +1,5 @@
-{% assign paper_visual = p.highlights | where: 'paper', paper.id | first %}
-<article class="paper{% if paper_visual.image and page.kind == 'publications' %} paper-with-image{% endif %}" id="paper-{{ paper.id }}">
-  {% if paper_visual.image and page.kind == 'publications' %}<a class="paper-figure-link" href="{{ paper_visual.image | relative_url }}" aria-label="{{ t.figure_link }}: {{ paper.title | escape }}"><img class="paper-thumbnail" src="{{ paper_visual.image | relative_url }}" alt="{{ paper_visual.image_alt[lang] }}" decoding="async" width="{{ paper_visual.image_width }}" height="{{ paper_visual.image_height }}"><span>{{ t.figure_link }} ↗</span></a>{% endif %}
-  <div class="paper-content">
-    <h3>{{ paper.title }}</h3>
-    <p class="paper-authors">{{ paper.authors | escape | replace: 'Yang, L.', '<strong>Yang, L.</strong>' | replace: '杨亮', '<strong>杨亮</strong>' }}</p>
-    <p class="paper-venue">{% if paper.venue != '' %}<em>{{ paper.venue }}</em>. {% endif %}{% if paper.year != '' %}{{ paper.year }}. {% endif %}{{ paper.detail[lang] }}.{% if paper.role[lang] != '' %} <span class="author-role">{{ paper.role[lang] }}.</span>{% endif %}</p>
-    {% if page.kind == 'publications' and paper.overview[lang] %}
-    <div class="paper-overview"><h4>{{ t.paper_overview }}</h4><p>{{ paper.overview[lang] | escape }}</p></div>
-    {% endif %}
-  </div>
+{% assign citation = paper.citation %}
+<article class="paper" id="paper-{{ paper.id }}">
+  <p class="paper-reference">{{ paper.authors | remove: '*' | escape }} ({% if paper.year != '' %}{{ paper.year }}{% else %}n.d.{% endif %}). {% if paper.group == 'review' or paper.group == 'working' %}<em>{{ citation.title | default: paper.title | escape }}</em> [{% if paper.group == 'review' %}Manuscript submitted for publication{% else %}Unpublished manuscript{% endif %}].{% elsif paper.group == 'journal' %}{{ citation.title | default: paper.title | escape }}. <em>{{ paper.venue | escape }}{% if citation.volume %}, {{ citation.volume }}{% endif %}</em>{% if citation.issue %}({{ citation.issue }}){% endif %}{% if citation.pages %}, {{ citation.pages }}{% elsif citation.article %}, Article {{ citation.article }}{% endif %}.{% elsif paper.group == 'conference' %}{{ citation.title | default: paper.title | escape }}. In <em>{{ citation.proceedings | escape }}</em>.{% endif %}{% if citation.url %} <a href="{{ citation.url | escape }}">{{ citation.url | escape }}</a>{% endif %}</p>
+  {% if paper.group == 'review' or paper.group == 'working' or paper.role[lang] != '' or citation.note %}<p class="paper-note">{% if paper.group == 'review' %}{{ paper.venue | escape }} · {{ paper.detail[lang] | escape }}{% elsif paper.group == 'working' %}{{ paper.detail[lang] | escape }}{% endif %}{% if paper.role[lang] != '' %}{% if paper.group == 'review' or paper.group == 'working' %} · {% endif %}{{ paper.role[lang] | escape }}{% endif %}{% if citation.note %}{% if paper.role[lang] != '' %} · {% endif %}{{ citation.note[lang] | escape }}{% endif %}</p>{% endif %}
 </article>

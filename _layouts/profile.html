@@ -23,7 +23,10 @@
   <link rel="preload" href="{{ '/assets/fonts/source-sans-3-semibold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}?v={{ site.time | date: '%s' }}">
   {% if page.kind == 'home' %}<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}?v={{ site.time | date: '%s' }}">{% endif %}
-  <script src="{{ '/assets/js/profile.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% if page.kind == 'publications' %}
+  <link rel="stylesheet" href="{{ '/assets/css/research-network.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+  <script src="{{ '/assets/js/research-network.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  {% endif %}
 </head>
 <body class="academic-site page-{{ page.kind }}">
   <a class="skip-link" href="#main">{{ t.skip }}</a>
@@ -62,27 +65,24 @@
     <section class="home-about" aria-labelledby="about-title">
       <h2 id="about-title">{{ t.about_label }}</h2>
       <div class="biography">
-        <p>{{ p.about[lang] | escape }}</p>
+        {% for paragraph in p.about[lang] %}<p>{{ paragraph | escape }}</p>{% endfor %}
       </div>
     </section>
     {% include profile-news.html %}
   {% else %}
     <header class="page-heading page-intro"><h1>{{ page.title }}</h1><p>{% if page.kind == 'publications' %}{{ t.research_intro }}{% else %}{{ t.talksintro }}{% endif %}</p></header>
     {% if page.kind == 'publications' %}
-      {% assign groups = 'review,journal,working,conference' | split: ',' %}
+      {% include profile-research-network.html %}
+      {% assign groups = 'review,working,journal,conference' | split: ',' %}
       <nav class="section-nav" aria-label="{{ t.publications }}">
         {% for group in groups %}{% assign papers = p.publications | where: 'group', group %}{% if papers.size > 0 %}<a href="#{{ group }}">{{ t[group] }}</a>{% endif %}{% endfor %}
       </nav>
-      {% include profile-research-map.html %}
-      <p class="source-note">{{ t.source_note }}</p>
       {% for group in groups %}
-        {% assign papers = p.publications | where: 'group', group %}
+        {% assign papers = p.publications | where: 'group', group | sort: 'reference_sort' %}
         {% if papers.size > 0 %}
-        <section class="section research-section" id="{{ group }}">
-          <div class="section-heading"><h2>{{ t[group] }}</h2><span class="count" aria-hidden="true">{{ papers.size }}</span></div>
-          {% assign group_has_figure = false %}
-          {% for paper in papers %}{% assign visual = p.highlights | where: 'paper', paper.id | first %}{% if visual.image %}{% assign group_has_figure = true %}{% endif %}{% endfor %}
-          <div class="publication-list{% if group_has_figure %} publication-list-with-figures{% endif %}">{% for paper in papers %}{% include profile-paper.html %}{% endfor %}</div>
+        <section class="section research-section" id="{{ group }}" aria-labelledby="{{ group }}-title">
+          <div class="section-heading"><h2 id="{{ group }}-title">{{ t[group] }}</h2><span class="count" aria-hidden="true">{{ papers.size }}</span></div>
+          <div class="publication-list">{% for paper in papers %}{% include profile-paper.html %}{% endfor %}</div>
         </section>
         {% endif %}
       {% endfor %}

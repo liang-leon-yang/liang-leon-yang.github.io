@@ -20,6 +20,7 @@
 .home-about { margin-top: 30px; }
 .home-about > h2 { margin-bottom: 16px; }
 .home-about .biography { max-width: 82ch; font-size: 17px; line-height: 1.8; overflow-wrap: anywhere; }
+.home-about .biography > p + p { margin-top: 18px; }
 .page-home .home-news { margin-top: 36px; }
 .page-home .home-news .section-heading { margin-bottom: 16px; }
 .page-home .news-list { padding: 0; margin: 0; list-style: none; border-top: 1px solid var(--line); }
@@ -27,6 +28,14 @@
 .page-home .news-item time { grid-area: date; font: 12px/1.6 var(--mono); color: var(--muted); white-space: nowrap; padding-top: 4px; }
 .page-home .news-item p { grid-area: text; min-width: 0; font-size: 17px; line-height: 1.65; overflow-wrap: anywhere; }
 .page-home .news-link { grid-area: link; font-size: 14px; line-height: 1.65; white-space: nowrap; padding-top: 2px; }
+.page-home .news-archive { margin-top: 14px; }
+.page-home .news-archive > summary { display: flex; align-items: center; gap: 8px; width: fit-content; padding: 6px 0; color: var(--link); font-size: 15px; cursor: pointer; list-style: none; }
+.page-home .news-archive > summary::-webkit-details-marker { display: none; }
+.page-home .news-archive > summary:hover .news-more, .page-home .news-archive > summary:hover .news-less { text-decoration: underline; text-underline-offset: 4px; }
+.page-home .news-less, .page-home .news-archive[open] .news-more { display: none; }
+.page-home .news-archive[open] .news-less { display: inline; }
+.page-home .news-archive[open] .news-chevron { transform: rotate(180deg); }
+.page-home .news-archive .news-list { margin-top: 12px; }
 @media (max-width: 680px) {
   .home-intro { grid-template-columns: minmax(0, 1fr) 88px; grid-template-areas: "identity portrait" "links links"; gap: 16px 22px; padding: 28px 0 24px; }
   .home-intro .home-role { font-size: 15px; }

@@ -198,7 +198,11 @@
       "overview": {
         "en": "This study develops EID-MARL, a dialogue model that makes the choice of an empathetic response strategy explicit. Specialized agents exchange emotional information through a learned communication structure, while an expectation-maximization method assigns feedback to individual communication links. Evaluations using automated assessments and medical expert reviews examine response quality, robustness, and generalization.",
         "zh": "本研究提出 EID-MARL 共情对话模型，将回应策略的选择显式纳入对话生成过程。不同智能体通过可学习的通信结构交换情绪信息，并利用期望最大化方法将反馈分配到具体的智能体通信连接。研究结合自动化评估与医学专家评价，考察生成回应的质量、鲁棒性和泛化能力。"
-      }
+      },
+      "citation": {
+        "title": "AI-enabled empathetic dialogue generation: An emotional intelligence-enhanced multi-agent reinforcement learning approach"
+      },
+      "reference_sort": "yang, l., xie, j., yin, q., & yan, z.  ai-enabled empathetic dialogue generation: an emotional intelligence-enhanced multi-agent reinforcement learning approach"
     },
     {
       "id": "support",
@@ -219,7 +223,11 @@
       "overview": {
         "en": "This study focuses on the implicit social support needs expressed in newly posted questions. It simulates a possible answer and uses gold-answer guided attentive contrastive learning to infer those needs. The approach explores how answer-side information can help interpret a question when an actual response is not yet available.",
         "zh": "本研究关注新发布问题中隐含的社会支持需求，通过模拟可能的回答，并结合标准回答引导的注意力对比学习，推断提问者的需求。其核心思路是在真实回答尚未出现时，利用模拟回答所提供的信息辅助理解问题。"
-      }
+      },
+      "citation": {
+        "title": "Simulating a pseudo-answer to infer implicit social support needs in new questions: A gold-answer guided attentive contrastive learning approach"
+      },
+      "reference_sort": "kuang, j., yang, l., cui, s., & fan, w.  simulating a pseudo-answer to infer implicit social support needs in new questions: a gold-answer guided attentive contrastive learning approach"
     },
     {
       "id": "copd",
@@ -236,7 +244,11 @@
       "role": {
         "en": "Corresponding author",
         "zh": "通讯作者"
-      }
+      },
+      "citation": {
+        "title": "An intelligent multi-view ensemble learning framework for chronic obstructive pulmonary disease risk assessment using respiratory sounds"
+      },
+      "reference_sort": "cui, s., kuang, j., & yang, l.  an intelligent multi-view ensemble learning framework for chronic obstructive pulmonary disease risk assessment using respiratory sounds"
     },
     {
       "id": "bayesian",
@@ -253,7 +265,13 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "Bayesian causal prediction of coronary heart disease: Leveraging LLM-guided structure discovery and imbalance-aware augmentation",
+        "volume": "349",
+        "article": "116480"
+      },
+      "reference_sort": "yang, l., ma, y., & wang, l. 2026 bayesian causal prediction of coronary heart disease: leveraging llm-guided structure discovery and imbalance-aware augmentation"
     },
     {
       "id": "therapeutics",
@@ -270,7 +288,12 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "Understanding digital therapeutics in disease self-management: A systematic literature review",
+        "article": "102831"
+      },
+      "reference_sort": "yang, l., zhang, m., jia, l., yan, z., & yin, q. 2025 understanding digital therapeutics in disease self-management: a systematic literature review"
     },
     {
       "id": "answers",
@@ -287,7 +310,13 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "A two-stage multi-task learning model for predicting and interpreting received answers in online mental health communities",
+        "volume": "270",
+        "article": "126583"
+      },
+      "reference_sort": "yin, q., yang, l., kuang, j., & yan, z. 2025 a two-stage multi-task learning model for predicting and interpreting received answers in online mental health communities"
     },
     {
       "id": "crowdfunding",
@@ -304,7 +333,13 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "Exploring the success determinants of crowdfunding for cultural and creative projects: An empirical study based on signal theory",
+        "volume": "70",
+        "article": "102036"
+      },
+      "reference_sort": "li, l., yang, l., zhao, m., liao, m., & cao, y. 2022 exploring the success determinants of crowdfunding for cultural and creative projects: an empirical study based on signal theory"
     },
     {
       "id": "team",
@@ -321,7 +356,14 @@
       "role": {
         "en": "Corresponding author",
         "zh": "通讯作者"
-      }
+      },
+      "citation": {
+        "title": "Effect of team diversity on physician performance and reputation: Evidence from an online healthcare platform",
+        "volume": "10",
+        "issue": "1",
+        "pages": "1–12"
+      },
+      "reference_sort": "wang, b., yan, z., yang, l., & yang, h. 2026 effect of team diversity on physician performance and reputation: evidence from an online healthcare platform"
     },
     {
       "id": "misinformation",
@@ -338,7 +380,18 @@
       "role": {
         "en": "Co-first author",
         "zh": "共同第一作者"
-      }
+      },
+      "citation": {
+        "title": "Combating mental health misinformation on social media: A knowledge-guided multimodal framework",
+        "volume": "64",
+        "issue": "1",
+        "article": "105054",
+        "note": {
+          "en": "2027 issue year, as listed in the source CV.",
+          "zh": "卷期年份为 2027，依据原始简历记录。"
+        }
+      },
+      "reference_sort": "shi, j., yang, l., & yan, z. 2027 combating mental health misinformation on social media: a knowledge-guided multimodal framework"
     },
     {
       "id": "readmission",
@@ -355,7 +408,13 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "An interpretable imbalance ensemble classification method for readmission risk assessment incorporating multi-view perturbation and SHAP analysis",
+        "volume": "190",
+        "article": "114404"
+      },
+      "reference_sort": "cui, s., gao, r., kuang, j., yang, l., qiu, h., & wei, x. 2025 an interpretable imbalance ensemble classification method for readmission risk assessment incorporating multi-view perturbation and shap analysis"
     },
     {
       "id": "commerce",
@@ -372,7 +431,14 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "The power of talk: Exploring the effects of streamers’ linguistic styles on sales performance in B2B livestreaming commerce",
+        "volume": "60",
+        "issue": "3",
+        "article": "103259"
+      },
+      "reference_sort": "liu, l., fang, j., yang, l., han, l., hossin, m. a., & wen, c. 2023 the power of talk: exploring the effects of streamers’ linguistic styles on sales performance in b2b livestreaming commerce"
     },
     {
       "id": "ugc",
@@ -389,7 +455,14 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "视频 UGC 流行度影响因素研究：基于 Bilibili 网站数据",
+        "volume": "24",
+        "issue": "1",
+        "pages": "42–51"
+      },
+      "reference_sort": "李良强，廖觅燕，刘璐，杨亮，方佳明 2022 视频 ugc 流行度影响因素研究：基于 bilibili 网站数据"
     },
     {
       "id": "hotel",
@@ -406,7 +479,14 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "边缘线索提高在线酒店预订意愿：天气和图片色调的匹配效应",
+        "volume": "24",
+        "issue": "6",
+        "pages": "62–73"
+      },
+      "reference_sort": "廖觅燕，刘璐，方佳明，杨亮，李良强 2021 边缘线索提高在线酒店预订意愿：天气和图片色调的匹配效应"
     },
     {
       "id": "integrity",
@@ -423,7 +503,14 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "我国科研诚信政策特征及演化逻辑：基于文本挖掘法",
+        "volume": "37",
+        "issue": "20",
+        "pages": "89–98"
+      },
+      "reference_sort": "杨锐，杨亮，李良强，张楠，廖觅燕 2020 我国科研诚信政策特征及演化逻辑：基于文本挖掘法"
     },
     {
       "id": "graph",
@@ -440,7 +527,11 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "From graph to determination: Reinforced graph evidence for robust mental-health misinformation detection"
+      },
+      "reference_sort": "yang, l., xie, j., yin, q., & yan, z.  from graph to determination: reinforced graph evidence for robust mental-health misinformation detection"
     },
     {
       "id": "night",
@@ -457,7 +548,11 @@
       "role": {
         "en": "",
         "zh": ""
-      }
+      },
+      "citation": {
+        "title": "Does the night give power? Social media depression and its symptom detection considering temporal patterns"
+      },
+      "reference_sort": "yang, l., xie, j., yin, q., & yan, z.  does the night give power? social media depression and its symptom detection considering temporal patterns"
     },
     {
       "id": "icis25",
@@ -478,7 +573,12 @@
       "overview": {
         "en": "This paper introduces EID-MARL for empathetic dialogue in mental health support. The framework separates response generation into three cognitive stages and uses four specialized agents to identify fine-grained emotional cues. Multi-round communication and link-level reward attribution coordinate the agents; experiments on ESConv compare the approach with competing dialogue models.",
         "zh": "本文面向心理健康支持中的共情对话，提出 EID-MARL 框架，将回应生成划分为三个认知阶段，并通过四个专门的智能体识别细粒度情绪线索。模型利用多轮通信与连接层面的奖励分配协调智能体，在 ESConv 数据集上与其他对话模型进行实验比较。"
-      }
+      },
+      "citation": {
+        "title": "Probing empathetic dialogue for mental health support: An emotional intelligence-enhanced multi-agent reinforcement learning approach",
+        "proceedings": "Proceedings of the International Conference on Information Systems"
+      },
+      "reference_sort": "yang, l., xie, j., yin, q., yan, z., dong, y., & lin, y. 2025 probing empathetic dialogue for mental health support: an emotional intelligence-enhanced multi-agent reinforcement learning approach"
     },
     {
       "id": "pacis25",
@@ -495,7 +595,12 @@
       "role": {
         "en": "Co-first author",
         "zh": "共同第一作者"
-      }
+      },
+      "citation": {
+        "title": "Protecting children from violent short videos: A child-attentive multimodal multitask learning approach",
+        "proceedings": "Proceedings of the Pacific Asia Conference on Information Systems"
+      },
+      "reference_sort": "zhao, c., yang, l., kuang, j., & yan, z. 2025 protecting children from violent short videos: a child-attentive multimodal multitask learning approach"
     },
     {
       "id": "icis24night",
@@ -516,7 +621,12 @@
       "overview": {
         "en": "This paper investigates how the timing of social media posts can inform the detection of depression and its symptoms. The proposed TTMCNet combines a Transformer with temporal relative positional encoding and a decay term to model relationships between posting times and text. Multi-task contrastive learning captures shared and distinct patterns across depression and its symptoms, with evaluation against benchmark models.",
         "zh": "本文研究社交媒体发帖的时间模式如何帮助识别抑郁及其症状。提出的 TTMCNet 在 Transformer 中引入时间相对位置编码与衰减项，建模发帖时间和文本之间的关联，并利用多任务对比学习捕捉抑郁及不同症状之间的共性与差异，通过基准模型比较验证方法表现。"
-      }
+      },
+      "citation": {
+        "title": "Does the night give power? Social media depression and its symptom detection considering temporal patterns",
+        "proceedings": "Proceedings of the International Conference on Information Systems"
+      },
+      "reference_sort": "yang, l., yin, q., yan, z., cui, s., & kuang, j. 2024 does the night give power? social media depression and its symptom detection considering temporal patterns"
     },
     {
       "id": "icis24support",
@@ -537,7 +647,12 @@
       "overview": {
         "en": "This paper studies how to classify social support needs in health questions when labeled data are limited. Its answer-enhanced semi-supervised deep learning approach (AESSDL) uses a dynamic two-dimensional interaction kernel to model question-answer relationships and quality-aware attention to weight different answers. The evaluation compares it with question classification and semi-supervised learning baselines, informing the matching of questions with relevant responders and resources.",
         "zh": "本文研究在标注数据有限的情况下，如何识别健康提问中的社会支持需求。提出的回答增强半监督深度学习方法 AESSDL，利用动态二维交互核刻画问题与回答之间的关系，并通过质量感知注意力为不同回答分配权重。研究与问题分类及半监督学习基线进行比较，为匹配合适的回答者与相关资源提供参考。"
-      }
+      },
+      "citation": {
+        "title": "Understanding social support needs in health question: An answer-enhanced semi-supervised deep learning approach",
+        "proceedings": "Proceedings of the International Conference on Information Systems"
+      },
+      "reference_sort": "kuang, j., yang, l., cui, s., & fan, w. 2024 understanding social support needs in health question: an answer-enhanced semi-supervised deep learning approach"
     }
   ],
   "talks": [
@@ -678,7 +793,13 @@
     }
   ],
   "about": {
-    "en": "I am a PhD candidate in Management Science and Engineering at the School of Management, Beijing Institute of Technology, specializing in Management Information Systems. My research focuses on digital health and online information systems, examining how AI can interpret emotional and social support needs, provide interpretable health risk assessments, and detect mental health misinformation. I draw on emotional intelligence, multi-agent reinforcement learning, Bayesian networks, contrastive learning, knowledge graphs, and multimodal modeling to develop computational methods for these problems. My work has appeared in Knowledge-Based Systems, Decision Support Systems, and Expert Systems with Applications, as well as the ICIS and PACIS conference proceedings. Manuscripts on empathetic dialogue generation and implicit social support needs are in major revision at Management Science and MIS Quarterly, respectively.",
-    "zh": "我是北京理工大学管理学院管理科学与工程专业博士研究生，研究方向为管理信息系统。我的研究主要围绕数字健康与在线信息系统展开，关注人工智能如何理解人的情绪与社会支持需求、为健康风险评估提供可解释的预测依据，以及识别网络中的心理健康错误信息。在方法上，我结合情绪智能、多智能体强化学习、贝叶斯网络、对比学习、知识图谱与多模态建模，探索面向这些问题的计算方法。相关成果发表于 Knowledge-Based Systems、Decision Support Systems、Expert Systems with Applications 等期刊及 ICIS、PACIS 会议；关于共情对话生成与隐含社会支持需求识别的研究分别在 Management Science 和 MIS Quarterly 大修中。"
+    "en": [
+      "I am a PhD candidate in Management Science and Engineering at the School of Management, Beijing Institute of Technology, specializing in Management Information Systems. My research examines how artificial intelligence can understand human needs and support decisions in digital health and online information systems. I focus on three related questions: how conversational systems can recognize emotions and implicit social support needs and generate empathetic responses; how health risk models can make disease and readmission predictions more interpretable; and how structured knowledge and multimodal evidence can help identify mental health misinformation. Across these areas, I study how information is represented and used in intelligent systems, and how their predictions, explanations, and responses relate to the needs of the people they support.",
+      "My work combines emotional intelligence and multi-agent reinforcement learning for dialogue, answer-informed contrastive learning for support-need inference, LLM-guided Bayesian structure learning and imbalance-aware modeling for health risk assessment, and knowledge graphs with multimodal learning for misinformation detection. I also study digital therapeutics in disease self-management and how online mental health communities respond to help-seeking. My publications include articles in Knowledge-Based Systems, Decision Support Systems, Expert Systems with Applications, Technology in Society, and Information Processing & Management, together with papers in the ICIS and PACIS proceedings. Two further manuscripts, on empathetic dialogue generation and implicit social support needs, are under major revision at Management Science and MIS Quarterly, respectively. The Research page presents these published and ongoing studies with their current publication status."
+    ],
+    "zh": [
+      "我是北京理工大学管理学院管理科学与工程专业的博士研究生，研究方向为管理信息系统。我的研究围绕数字健康与在线信息系统展开，关注人工智能如何理解人的需求，并为健康相关的判断与交流提供支持。具体而言，我研究心理健康对话中的情绪识别、隐含社会支持需求与共情回应，探索疾病及再入院风险预测的可解释建模方法，并利用结构化知识与多模态证据识别社交媒体中的心理健康错误信息。这些研究从需求理解、风险解释和信息求证三个角度，考察智能系统如何组织和使用信息，以及模型的预测、解释与回应如何联系到人的实际需求。",
+      "在方法上，我将情绪智能与多智能体强化学习用于共情对话，将回答信息增强的对比学习用于支持需求识别，结合大语言模型引导的贝叶斯结构学习与不平衡学习开展健康风险建模，并利用知识图谱和多模态学习进行错误信息检测。此外，我也关注数字疗法在疾病自我管理中的应用，以及在线心理健康社区如何回应求助。相关成果发表于 Knowledge-Based Systems、Decision Support Systems、Expert Systems with Applications、Technology in Society、Information Processing & Management 等期刊及 ICIS、PACIS 会议；关于共情对话生成与隐含社会支持需求识别的两篇论文，分别在 Management Science 和 MIS Quarterly 大修中。研究成果页按发表状态列出了这些已发表与进行中的研究。"
+    ]
   }
 }

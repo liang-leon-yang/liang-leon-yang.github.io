@@ -17,11 +17,11 @@
     "contact_text": "For research conversations and academic collaboration in AI, health analytics, and information systems.",
     "email": "Email",
     "journal": "Journal publications",
-    "review": "Manuscripts under review and revision",
+    "review": "Under review & revision",
     "working": "Working papers",
     "conference": "Conference proceedings",
     "source_note": "Publications and manuscripts are grouped by publication status. Papers under review or revision are listed separately from published journal articles and conference proceedings.",
-    "research_intro": "My research develops computational methods for digital health and online information systems, focusing on empathetic dialogue, interpretable health risk assessment, and mental health misinformation detection. Across these areas, I investigate how emotional, predictive, and knowledge-based information can inform the design of intelligent systems.",
+    "research_intro": "Publications and ongoing work, grouped by publication status.",
     "talksintro": "Selected conference presentations and research workshops.",
     "projects": "Research projects",
     "patents": "Patents",
@@ -45,7 +45,9 @@
     "figure_link": "View full-size figure",
     "paper_overview": "Research summary",
     "show_overview": "Read overview",
-    "hide_overview": "Hide overview"
+    "hide_overview": "Hide overview",
+    "news_more": "More updates",
+    "news_less": "Fewer updates"
   },
   "zh": {
     "home": "首页",
@@ -69,7 +71,7 @@
     "working": "工作论文",
     "conference": "会议论文",
     "source_note": "论文按发表状态分类列示；在审及在修稿件与已发表的期刊论文、会议论文分别标注。",
-    "research_intro": "我的研究面向数字健康与在线信息系统中的计算方法，重点关注共情对话、可解释健康风险评估及心理健康错误信息检测。围绕这些问题，研究情绪线索、预测信息与知识证据如何支持智能系统的设计。",
+    "research_intro": "按发表状态分类列示的论文与进行中的研究。",
     "talksintro": "会议报告与研究研讨会精选。",
     "projects": "科研项目",
     "patents": "发明专利",
@@ -93,6 +95,8 @@
     "figure_link": "查看原图",
     "paper_overview": "研究概述",
     "show_overview": "展开研究简介",
-    "hide_overview": "收起研究简介"
+    "hide_overview": "收起研究简介",
+    "news_more": "更多动态",
+    "news_less": "收起动态"
   }
 }

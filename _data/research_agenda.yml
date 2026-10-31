@@ -63,6 +63,16 @@
           "en": "Response",
           "zh": "共情回应"
         }
+      },
+      "connection": {
+        "title": {
+          "en": "Understanding people",
+          "zh": "理解人的需求"
+        },
+        "summary": {
+          "en": "Empathetic dialogue and social support",
+          "zh": "共情对话与社会支持"
+        }
       }
     },
     {
@@ -115,6 +125,16 @@
         "output": {
           "en": "Explanation",
           "zh": "解释依据"
+        }
+      },
+      "connection": {
+        "title": {
+          "en": "Explaining health risks",
+          "zh": "解释健康风险"
+        },
+        "summary": {
+          "en": "Interpretable prediction and risk assessment",
+          "zh": "可解释预测与风险评估"
         }
       }
     },
@@ -169,6 +189,16 @@
           "en": "Assessment",
           "zh": "比对评估"
         }
+      },
+      "connection": {
+        "title": {
+          "en": "Grounding health information",
+          "zh": "以知识求证信息"
+        },
+        "summary": {
+          "en": "Knowledge and graph evidence for misinformation detection",
+          "zh": "知识与图证据驱动的错误信息检测"
+        }
       }
     }
   ],
@@ -183,5 +213,23 @@
   "play": {
     "en": "Play illustrations",
     "zh": "播放示意"
+  },
+  "network": {
+    "heading": {
+      "en": "A shared research agenda",
+      "zh": "研究主线"
+    },
+    "root": {
+      "en": "AI for digital health",
+      "zh": "面向数字健康的人工智能"
+    },
+    "pause": {
+      "en": "Pause animation",
+      "zh": "暂停动画"
+    },
+    "play": {
+      "en": "Play animation",
+      "zh": "播放动画"
+    }
   }
 }

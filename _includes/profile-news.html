@@ -3,13 +3,15 @@
 <section class="home-news" aria-labelledby="news-title">
   <div class="section-heading"><h2 id="news-title">{{ t.news }}</h2></div>
   <ul class="news-list">
-    {% for item in news limit:5 %}
-    <li class="news-item">
-      <time class="date" datetime="{{ item.date }}">{{ item.date | replace: '-', '.' }}</time>
-      <p>{{ item.text[lang] | escape }}</p>
-      {% if item.url %}<a class="news-link" href="{{ prefix | append: item.url | relative_url }}" aria-label="{{ t.news_details }}: {{ item.text[lang] | escape }}">{{ t.news_details }} <span aria-hidden="true">↗</span></a>{% endif %}
-    </li>
-    {% endfor %}
+    {% for item in news limit:5 %}{% include profile-news-item.html %}{% endfor %}
   </ul>
+  {% if news.size > 5 %}
+  <details class="news-archive">
+    <summary><span class="news-more">{{ t.news_more }}</span><span class="news-less">{{ t.news_less }}</span> <span class="count">({{ news.size | minus: 5 }})</span><span class="news-chevron" aria-hidden="true">↓</span></summary>
+    <ul class="news-list">
+      {% for item in news offset:5 %}{% include profile-news-item.html %}{% endfor %}
+    </ul>
+  </details>
+  {% endif %}
 </section>
 {% endif %}
