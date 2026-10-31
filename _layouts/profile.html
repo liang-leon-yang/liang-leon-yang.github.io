@@ -65,7 +65,7 @@
     <section class="home-about" aria-labelledby="about-title">
       <h2 id="about-title">{{ t.about_label }}</h2>
       <div class="biography">
-        {% for paragraph in p.about[lang] %}<p>{{ paragraph | escape }}</p>{% endfor %}
+        {% for paragraph in p.about[lang] %}{{ paragraph | markdownify }}{% endfor %}
       </div>
     </section>
     {% include profile-news.html %}
