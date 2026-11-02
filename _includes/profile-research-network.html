@@ -3,7 +3,7 @@
 <section class="research-network" aria-labelledby="research-network-title" data-research-network>
   <div class="section-heading">
     <h2 id="research-network-title">{{ pathway.heading[lang] }}</h2>
-    <button class="network-toggle" type="button" aria-pressed="false" data-pause-label="{{ agenda.network.pause[lang] }}" data-play-label="{{ agenda.network.play[lang] }}" hidden><span class="network-toggle-icon" aria-hidden="true">Ⅱ</span><span class="network-toggle-label">{{ agenda.network.pause[lang] }}</span></button>
+    <button class="network-toggle" type="button" aria-pressed="false" data-pause-label="{{ agenda.network.pause[lang] }}" data-play-label="{{ agenda.network.play[lang] }}" hidden><span class="network-toggle-icon" aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14" focusable="false"><path class="network-icon-pause" d="M5.5 3.5v9m5-9v9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path class="network-icon-play" d="m5 3.5 7 4.5-7 4.5Z" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span><span class="network-toggle-label">{{ agenda.network.pause[lang] }}</span></button>
   </div>
   <p class="path-intro" id="research-loop-intro">{{ pathway.intro[lang] }}</p>
   <div class="research-loop">
@@ -15,15 +15,24 @@
           <path class="loop-track" data-loop-edge="1" pathLength="1" d="M309.99 286.48 A140 140 0 0 1 90.01 286.48"/>
           <path class="loop-track" data-loop-edge="2" pathLength="1" d="M70.01 252.06 A140 140 0 0 1 180 61.44"/>
         </g>
+        <g fill="none" stroke-width="1.7" aria-hidden="true">
+          <path class="loop-progress" data-loop-edge="0" pathLength="1" d="M220 61.44 A140 140 0 0 1 329.99 252.06"/>
+          <path class="loop-progress" data-loop-edge="1" pathLength="1" d="M309.99 286.48 A140 140 0 0 1 90.01 286.48"/>
+          <path class="loop-progress" data-loop-edge="2" pathLength="1" d="M70.01 252.06 A140 140 0 0 1 180 61.44"/>
+        </g>
         <g fill="none" stroke-width="2" aria-hidden="true">
           <path class="loop-signal" data-loop-edge="0" pathLength="1" d="M220 61.44 A140 140 0 0 1 329.99 252.06"/>
           <path class="loop-signal" data-loop-edge="1" pathLength="1" d="M309.99 286.48 A140 140 0 0 1 90.01 286.48"/>
           <path class="loop-signal" data-loop-edge="2" pathLength="1" d="M70.01 252.06 A140 140 0 0 1 180 61.44"/>
         </g>
+        <g class="loop-cursor" aria-hidden="true">
+          <circle class="loop-cursor-halo" r="9"/>
+          <circle class="loop-cursor-core" r="3.5"/>
+        </g>
       </svg>
       <div class="loop-center"><span>{{ pathway.loop.eyebrow[lang] }}</span><strong>{{ pathway.loop.title[lang] }}</strong><span>{{ pathway.loop.subtitle[lang] }}</span></div>
       <nav class="path-steps" aria-label="{{ pathway.nav[lang] }}" aria-describedby="research-loop-intro">
-        {% for chapter in pathway.chapters %}<a class="path-step" id="path-step-{{ chapter.id }}" href="#path-panel-{{ chapter.id }}"><span class="path-index" aria-hidden="true">0{{ forloop.index }}</span><span class="path-label">{{ chapter.label[lang] }}</span></a>{% endfor %}
+        {% for chapter in pathway.chapters %}<a class="path-step" id="path-step-{{ chapter.id }}" href="#path-panel-{{ chapter.id }}"><span class="path-index" aria-hidden="true"><svg class="node-progress" viewBox="0 0 48 48" width="48" height="48" focusable="false"><circle class="node-progress-track" cx="24" cy="24" r="21"/><circle class="node-progress-fill" cx="24" cy="24" r="21" pathLength="1"/></svg><span>0{{ forloop.index }}</span></span><span class="path-label">{{ chapter.label[lang] }}</span></a>{% endfor %}
       </nav>
     </div>
     <div class="path-panels">

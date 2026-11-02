@@ -1,16 +1,41 @@
-/* Links and all three research themes remain available without JavaScript. */
+/* The research themes and paper links remain readable without motion APIs. */
 for (const network of document.querySelectorAll('[data-research-network]')) {
-  if (typeof window.matchMedia !== 'function' || typeof window.IntersectionObserver !== 'function') continue;
+  if (typeof window.matchMedia !== 'function' || typeof window.IntersectionObserver !== 'function' || typeof window.requestAnimationFrame !== 'function' || typeof window.cancelAnimationFrame !== 'function') continue;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const steps = [...network.querySelectorAll('.path-step')];
   const panels = [...network.querySelectorAll('.path-panel')];
   const edges = [...network.querySelectorAll('[data-loop-edge]')];
+  const tracks = [...network.querySelectorAll('.loop-track')];
+  const fills = [...network.querySelectorAll('.loop-progress')];
+  const signals = [...network.querySelectorAll('.loop-signal')];
+  const cursor = network.querySelector('.loop-cursor');
+  if (!tracks.length || tracks.some(track => typeof track.getTotalLength !== 'function' || typeof track.getPointAtLength !== 'function')) continue;
+  const lengths = tracks.map(track => track.getTotalLength());
   const toggle = network.querySelector('.network-toggle');
   const panelGroup = network.querySelector('.path-panels');
   const duration = 8000;
   let active = 0, userPaused = false, visible = false, printing = false;
-  let hovering = false, focusPaused = false, timer = null, started = 0, remaining = duration;
+  let hovering = false, focusPaused = false, timer = null, frame = null;
+  let started = 0, remaining = duration;
 
+  function drawProgress() {
+    const elapsed = duration - remaining + (timer === null ? 0 : performance.now() - started);
+    const progress = Math.min(1, Math.max(0, elapsed / duration));
+    steps[active].style.setProperty('--loop-progress', String(progress));
+    fills[active].style.strokeDasharray = `${progress} 1`;
+    signals[active].style.strokeDasharray = `${Math.min(progress, .12)} 1`;
+    signals[active].style.strokeDashoffset = String(-Math.max(0, progress - .12));
+    const point = tracks[active].getPointAtLength(lengths[active] * progress);
+    cursor.setAttribute('transform', `translate(${point.x} ${point.y})`);
+  }
+  function stopFrame() {
+    if (frame !== null) window.cancelAnimationFrame(frame);
+    frame = null;
+  }
+  function animate() {
+    drawProgress();
+    frame = window.requestAnimationFrame(animate);
+  }
   function stopTimer() {
     if (timer === null) return;
     remaining = Math.max(0, remaining - (performance.now() - started));
@@ -23,12 +48,14 @@ for (const network of document.querySelectorAll('[data-research-network]')) {
     toggle.hidden = preference.matches;
     toggle.setAttribute('aria-pressed', String(userPaused));
     toggle.querySelector('.network-toggle-label').textContent = userPaused ? toggle.dataset.playLabel : toggle.dataset.pauseLabel;
-    toggle.querySelector('.network-toggle-icon').textContent = userPaused ? '▷' : 'Ⅱ';
     if (!running) stopTimer();
     else if (timer === null) {
       started = performance.now();
       timer = window.setTimeout(() => { timer = null; select((active + 1) % steps.length); }, remaining);
     }
+    stopFrame();
+    drawProgress();
+    if (running) frame = window.requestAnimationFrame(animate);
   }
   function select(index, manual = false) {
     stopTimer();
@@ -38,6 +65,7 @@ for (const network of document.querySelectorAll('[data-research-network]')) {
     steps.forEach((step, i) => {
       step.setAttribute('aria-selected', String(i === active));
       step.tabIndex = i === active ? 0 : -1;
+      step.style.removeProperty('--loop-progress');
       panels[i].classList.toggle('is-active', i === active);
       panels[i].setAttribute('aria-hidden', String(i !== active));
       panels[i].inert = i !== active;
