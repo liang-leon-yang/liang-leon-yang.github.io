@@ -1,4 +1,4 @@
-/* A clockwise loop connects the four perspectives and their original papers. */
+/* A clockwise loop connects the three digital mental health themes and their original papers. */
 .research-network { margin: 32px 0 36px; padding-bottom: 30px; border-bottom: 1px solid var(--line); }
 .research-network > .section-heading { align-items: center; margin-bottom: 10px; }
 .research-network h2 { font-size: 22px; }
@@ -19,9 +19,8 @@
 .path-steps { margin: 0; pointer-events: none; }
 .path-step { position: absolute; display: flex; flex-direction: column; align-items: center; gap: 7px; width: 30%; padding: 0 2px; transform: translate(-50%, -16px); color: var(--muted); font-size: 14px; line-height: 1.45; text-align: center; pointer-events: auto; }
 .path-step:nth-child(1) { top: 15%; left: 50%; flex-direction: column-reverse; transform: translate(-50%, calc(-100% + 16px)); }
-.path-step:nth-child(2) { top: 50%; left: 85%; }
-.path-step:nth-child(3) { top: 85%; left: 50%; }
-.path-step:nth-child(4) { top: 50%; left: 15%; }
+.path-step:nth-child(2) { top: 67.5%; left: 80.31%; }
+.path-step:nth-child(3) { top: 67.5%; left: 19.69%; }
 .path-step:hover { color: var(--link); text-decoration: none; }
 .path-index { display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid #a5b3c5; border-radius: 50%; background: #fff; font: 12px/1 var(--mono); }
 .path-label { padding-inline: 3px; background: #fff; }
@@ -43,6 +42,14 @@
 .path-papers { display: grid; grid-template-columns: minmax(0,1fr); gap: 6px 24px; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.6; }
 .path-papers a { overflow-wrap: break-word; }
 .path-papers a > span { display: inline-block; }
+.related-research { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
+.related-research > summary { width: fit-content; color: var(--ink); font-size: 15px; font-weight: 600; cursor: pointer; }
+.related-research > summary .count { margin-left: 8px; color: var(--muted); font-size: 12px; font-weight: 400; }
+.related-intro { max-width: 85ch; margin-top: 14px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.related-groups { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; margin-top: 18px; }
+.related-group { min-width: 0; }
+.related-group h3 { margin-bottom: 9px; font-size: 15px; line-height: 1.5; }
+.related-papers { grid-template-columns: minmax(0,1fr); }
 @media (prefers-reduced-motion: no-preference) {
   .path-ready .loop-signal.is-current { opacity: 1; animation: loop-flow 8s linear infinite; animation-play-state: paused; }
   .path-running .loop-signal.is-current { animation-play-state: running; }
@@ -64,6 +71,8 @@
   .path-intro, .path-summary { font-size: 14px; }
   .research-loop { margin-top: 18px; gap: 18px; }
   .path-step { font-size: 12px; }
+  .related-groups { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  html[lang="zh-CN"] .loop-center > strong { font-size: 16px; }
   .loop-center > strong { font-size: 18px; }
   .loop-center > span { font-size: 11px; }
   .path-panels { padding-top: 18px; }

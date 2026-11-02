@@ -11,16 +11,14 @@
       <svg class="loop-tracks" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
         <defs><marker id="loop-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 1 4 3-4 3" fill="none" stroke="currentColor" stroke-width="1.25"/></marker></defs>
         <g fill="none" stroke-width="1.5" marker-end="url(#loop-arrow)">
-          <path class="loop-track" data-loop-edge="0" pathLength="1" d="M220 60 A142 142 0 0 1 340 180"/>
-          <path class="loop-track" data-loop-edge="1" pathLength="1" d="M340 220 A142 142 0 0 1 220 340"/>
-          <path class="loop-track" data-loop-edge="2" pathLength="1" d="M180 340 A142 142 0 0 1 60 220"/>
-          <path class="loop-track" data-loop-edge="3" pathLength="1" d="M60 180 A142 142 0 0 1 180 60"/>
+          <path class="loop-track" data-loop-edge="0" pathLength="1" d="M220 61.44 A140 140 0 0 1 329.99 252.06"/>
+          <path class="loop-track" data-loop-edge="1" pathLength="1" d="M309.99 286.48 A140 140 0 0 1 90.01 286.48"/>
+          <path class="loop-track" data-loop-edge="2" pathLength="1" d="M70.01 252.06 A140 140 0 0 1 180 61.44"/>
         </g>
         <g fill="none" stroke-width="2" aria-hidden="true">
-          <path class="loop-signal" data-loop-edge="0" pathLength="1" d="M220 60 A142 142 0 0 1 340 180"/>
-          <path class="loop-signal" data-loop-edge="1" pathLength="1" d="M340 220 A142 142 0 0 1 220 340"/>
-          <path class="loop-signal" data-loop-edge="2" pathLength="1" d="M180 340 A142 142 0 0 1 60 220"/>
-          <path class="loop-signal" data-loop-edge="3" pathLength="1" d="M60 180 A142 142 0 0 1 180 60"/>
+          <path class="loop-signal" data-loop-edge="0" pathLength="1" d="M220 61.44 A140 140 0 0 1 329.99 252.06"/>
+          <path class="loop-signal" data-loop-edge="1" pathLength="1" d="M309.99 286.48 A140 140 0 0 1 90.01 286.48"/>
+          <path class="loop-signal" data-loop-edge="2" pathLength="1" d="M70.01 252.06 A140 140 0 0 1 180 61.44"/>
         </g>
       </svg>
       <div class="loop-center"><span>{{ pathway.loop.eyebrow[lang] }}</span><strong>{{ pathway.loop.title[lang] }}</strong><span>{{ pathway.loop.subtitle[lang] }}</span></div>
@@ -43,4 +41,18 @@
       {% endfor %}
     </div>
   </div>
+  <details class="related-research">
+    <summary>{{ pathway.related.heading[lang] }} <span class="count">{{ pathway.related.count }}</span></summary>
+    <p class="related-intro">{{ pathway.related.intro[lang] }}</p>
+    <div class="related-groups">
+      {% for group in pathway.related.groups %}
+      <section class="related-group" aria-labelledby="related-group-{{ forloop.index }}">
+        <h3 id="related-group-{{ forloop.index }}">{{ group.title[lang] }}</h3>
+        <ul class="path-papers related-papers">
+          {% for reference in group.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+    </div>
+  </details>
 </section>

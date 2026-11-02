@@ -1,4 +1,4 @@
-/* Links and all four research perspectives remain available without JavaScript. */
+/* Links and all three research themes remain available without JavaScript. */
 for (const network of document.querySelectorAll('[data-research-network]')) {
   if (typeof window.matchMedia !== 'function' || typeof window.IntersectionObserver !== 'function') continue;
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');

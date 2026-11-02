@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
-title                    : "Liang Yang | AI for Healthcare"  # Update this with the title of your site
+title                    : "Liang Yang | Digital Mental Health"  # Update this with the title of your site
 title_separator          : "-"
 name                     : &name "Liang Yang"
-description              : &description "PhD candidate in Management Information Systems, focusing on AI-enabled healthcare, empathetic dialogue systems, and digital health analytics."
+description              : &description "PhD candidate in Management Information Systems researching digital mental health, digital care and social support, and trust in online information environments."
 url                      : https://liang-leon-yang.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

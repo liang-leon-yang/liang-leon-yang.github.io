@@ -234,12 +234,12 @@
   },
   "pathway": {
     "heading": {
-      "en": "A connected research loop",
-      "zh": "研究如何形成闭环"
+      "en": "Digital mental health",
+      "zh": "数字心理健康"
     },
     "intro": {
-      "en": "Digital behavior raises questions about support needs; those needs motivate interpretable health decisions, which depend on trustworthy information. Information quality brings us back to how people engage with digital platforms. Select a part of the loop to explore the related studies.",
-      "zh": "从数字行为中理解支持需求，由需求延伸到可解释的健康决策，再追问决策所依赖的信息是否可信；信息质量又将问题带回人们如何信任、使用和参与数字平台。点击环节，查看相互关联的研究。"
+      "en": "The loop connects three themes in digital mental health: understanding people's experiences, supporting care and social connection, and examining the information environments around them. Each theme opens questions for the next.",
+      "zh": "围绕数字心理健康，将理解个体经历、支持照护与社会联结，以及考察信息环境三个主题串成闭环。每一类问题都为下一类问题提供研究视角。"
     },
     "nav": {
       "en": "Explore the research loop clockwise",
@@ -251,16 +251,16 @@
     },
     "loop": {
       "eyebrow": {
-        "en": "A shared question",
-        "zh": "共同的问题"
+        "en": "Research focus",
+        "zh": "研究主线"
       },
       "title": {
-        "en": "AI for digital health",
-        "zh": "面向数字健康的人工智能"
+        "en": "Digital mental health",
+        "zh": "数字心理健康"
       },
       "subtitle": {
-        "en": "People · Decisions · Trust",
-        "zh": "人 · 决策 · 信任"
+        "en": "Understanding · Care · Trust",
+        "zh": "理解 · 照护 · 信任"
       },
       "connection_label": {
         "en": "Next connection →",
@@ -269,93 +269,26 @@
     },
     "chapters": [
       {
-        "id": "platforms",
+        "id": "experience",
         "label": {
-          "en": "Digital behavior",
-          "zh": "数字行为"
+          "en": "Mental health",
+          "zh": "心理健康"
         },
         "title": {
-          "en": "Digital platforms and human behavior",
-          "zh": "数字平台与人的行为"
+          "en": "Mental health in digital environments",
+          "zh": "数字环境中的心理健康"
         },
         "bridge": {
-          "en": "Understanding how people respond to information",
-          "zh": "从人与信息的互动出发"
-        },
-        "connection": {
-          "en": "Online expression and interaction lead to a closer question: what support do people need?",
-          "zh": "由线上表达与互动，进一步追问：人们需要怎样的支持？"
+          "en": "Understanding people's experiences in context",
+          "zh": "在数字情境中理解个体经历"
         },
         "summary": {
-          "en": "My work on crowdfunding, livestreaming, online video, hotel booking, physician teams, and research integrity examines how information, social cues, and institutional settings relate to behavior. These studies provide an information systems perspective for the health and support questions that follow.",
-          "zh": "围绕众筹、直播、视频内容、酒店预订、医生团队与科研诚信，研究信息线索、社会互动与制度环境如何联系到人的行为。这些工作提供了信息系统的研究视角，并与后续健康场景中的需求理解和信息使用问题相连接。"
-        },
-        "papers": [
-          {
-            "id": "crowdfunding",
-            "label": {
-              "en": "Crowdfunding signals",
-              "zh": "众筹项目的信号线索"
-            }
-          },
-          {
-            "id": "commerce",
-            "label": {
-              "en": "Language in livestreaming",
-              "zh": "直播语言与销售表现"
-            }
-          },
-          {
-            "id": "ugc",
-            "label": {
-              "en": "Video UGC popularity",
-              "zh": "视频 UGC 流行度"
-            }
-          },
-          {
-            "id": "hotel",
-            "label": {
-              "en": "Cues in hotel booking",
-              "zh": "酒店预订中的边缘线索"
-            }
-          },
-          {
-            "id": "team",
-            "label": {
-              "en": "Physician teams and reputation",
-              "zh": "医生团队与声誉"
-            }
-          },
-          {
-            "id": "integrity",
-            "label": {
-              "en": "Research integrity policy",
-              "zh": "科研诚信政策演化"
-            }
-          }
-        ]
-      },
-      {
-        "id": "support",
-        "label": {
-          "en": "Support needs",
-          "zh": "支持需求"
-        },
-        "title": {
-          "en": "Understanding mental health and support needs",
-          "zh": "理解心理健康与支持需求"
-        },
-        "bridge": {
-          "en": "Connecting online behavior with individual support needs",
-          "zh": "将线上行为与个体支持需求联系起来"
+          "en": "I study how mental health experiences are expressed and understood in digital environments. This theme examines online behavior and language as ways of understanding people's circumstances, with attention to context and time. Existing studies on depression and symptom detection provide a foundation for this broader interest in digital mental health.",
+          "zh": "我关注心理健康经历如何在数字环境中被表达和理解，结合情境与时间，考察线上行为和语言所呈现的个体状态。现有的抑郁及症状识别研究，为理解数字场景中的心理健康提供了具体切入点。"
         },
         "connection": {
-          "en": "Understanding individual needs motivates a related question: how can health decisions be supported with interpretable evidence?",
-          "zh": "从理解个体需求，延伸到如何以可解释的证据支持健康决策。"
-        },
-        "summary": {
-          "en": "Social media posts and health questions provide different views of mental health and help-seeking. Depression detection and answer modeling connect with research on implicit support needs; empathetic dialogue work explores how AI can respond to those needs. The links below include conference studies and ongoing manuscripts.",
-          "zh": "社交媒体发帖与健康提问，从不同角度呈现心理状态与求助需求。抑郁识别和回答建模连接到隐含社会支持需求的研究，共情对话则进一步探索人工智能如何回应这些需求。相关工作包括会议论文与进行中的研究稿件。"
+          "en": "Understanding people's experiences leads to questions about the care and support available to them.",
+          "zh": "由理解个体经历，进一步追问人们能够获得怎样的照护与支持。"
         },
         "papers": [
           {
@@ -371,7 +304,32 @@
               "en": "Temporal depression detection · working paper",
               "zh": "时间模式与抑郁识别 · 工作论文"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "support",
+        "label": {
+          "en": "Care & support",
+          "zh": "照护与支持"
+        },
+        "title": {
+          "en": "Digital care and social support",
+          "zh": "数字照护与社会支持"
+        },
+        "bridge": {
+          "en": "Connecting understanding with support",
+          "zh": "将个体理解与支持方式相连接"
+        },
+        "summary": {
+          "en": "I study how digital technologies mediate help-seeking and the provision of emotional and informational support. This theme connects online communities with AI-mediated support, asking how digital care can respond to people's needs and circumstances. Existing studies examine community responses, social support needs, and empathetic conversation.",
+          "zh": "我研究数字技术如何参与求助过程，并支持情感与信息层面的社会支持。从在线社区中的互动到人工智能参与的支持方式，关注数字照护如何回应个体需求与所处情境。现有工作涵盖社区回应、社会支持需求与共情交流。"
+        },
+        "connection": {
+          "en": "Support also raises questions about the trustworthiness and safety of the information and interactions around it.",
+          "zh": "围绕支持过程，进一步考察相关信息与互动的可信度和安全性。"
+        },
+        "papers": [
           {
             "id": "answers",
             "label": {
@@ -410,79 +368,26 @@
         ]
       },
       {
-        "id": "health",
-        "label": {
-          "en": "Health decisions",
-          "zh": "健康决策"
-        },
-        "title": {
-          "en": "Supporting interpretable health decisions",
-          "zh": "支持可解释的健康决策"
-        },
-        "bridge": {
-          "en": "From understanding needs to explaining health risks",
-          "zh": "从理解需求延伸到解释健康风险"
-        },
-        "connection": {
-          "en": "Evidence for a decision also raises a question about its basis: how reliable is the health information people encounter?",
-          "zh": "决策需要证据，也需要追问：人们接触到的健康信息是否可靠？"
-        },
-        "summary": {
-          "en": "A related question is how data and models can support health decisions with understandable evidence. Coronary heart disease prediction, readmission modeling, and respiratory-sound assessment examine risk and model interpretation, while the digital therapeutics review considers technology in disease self-management.",
-          "zh": "与需求理解相联系的另一类问题，是如何让数据与模型为健康判断提供可理解的依据。冠心病预测、再入院建模与呼吸音评估关注风险及模型解释；数字疗法综述则从疾病自我管理的角度，考察技术如何支持健康实践。"
-        },
-        "papers": [
-          {
-            "id": "bayesian",
-            "label": {
-              "en": "LLM-guided Bayesian prediction",
-              "zh": "大语言模型引导的贝叶斯预测"
-            }
-          },
-          {
-            "id": "readmission",
-            "label": {
-              "en": "Interpretable readmission risk",
-              "zh": "可解释再入院风险"
-            }
-          },
-          {
-            "id": "copd",
-            "label": {
-              "en": "Respiratory-sound risk assessment",
-              "zh": "呼吸音与疾病风险评估"
-            }
-          },
-          {
-            "id": "therapeutics",
-            "label": {
-              "en": "Digital therapeutics and self-management",
-              "zh": "数字疗法与疾病自我管理"
-            }
-          }
-        ]
-      },
-      {
         "id": "information",
         "label": {
-          "en": "Information integrity",
-          "zh": "信息可信"
+          "en": "Trust & safety",
+          "zh": "信任与安全"
         },
         "title": {
-          "en": "Grounding online information in evidence",
-          "zh": "以证据支持在线信息可信性"
+          "en": "Trust and information environments",
+          "zh": "信任与信息环境"
         },
         "bridge": {
-          "en": "Health support also depends on reliable information",
-          "zh": "健康支持也依赖可靠的信息"
-        },
-        "connection": {
-          "en": "Information quality brings the loop back to platforms: how do credibility and content safety relate to trust, participation, and behavior?",
-          "zh": "信息质量将闭环带回数字平台：可信度与内容安全如何联系到信任、参与和行为？"
+          "en": "Situating support within its information environment",
+          "zh": "将支持过程放回信息环境中考察"
         },
         "summary": {
-          "en": "Reliable information connects these strands of work. Knowledge-guided multimodal learning and graph-evidence reasoning address mental health misinformation. Child-attentive video analysis studies a related content-safety problem, extending the broader interest in how AI interprets online content and supports its assessment.",
-          "zh": "可靠的信息将上述研究问题进一步联系起来。知识引导的多模态学习与图证据推理用于研究心理健康错误信息；面向儿童的短视频分析关注相关的内容安全问题，共同考察人工智能如何理解在线内容，并为内容判断提供依据。"
+          "en": "I study the information environments in which people seek mental health knowledge and support, with an emphasis on credibility, trust, and safety. Research on mental health misinformation examines the reliability of online content. Related work on children's video safety extends this interest to wider online content risks.",
+          "zh": "我关注人们获取心理健康知识与支持时所处的信息环境，考察其中的可信度、信任与安全问题。心理健康错误信息研究聚焦在线内容的可靠性；面向儿童的视频安全研究，则将相关关注延伸到更广泛的在线内容风险。"
+        },
+        "connection": {
+          "en": "These environments bring the loop back to how people express, interpret, and seek help for mental health experiences online.",
+          "zh": "信息环境将闭环带回起点：人们如何在线表达和理解心理健康经历，并围绕这些经历寻求帮助。"
         },
         "papers": [
           {
@@ -508,6 +413,113 @@
           }
         ]
       }
-    ]
+    ],
+    "related": {
+      "heading": {
+        "en": "Related research and foundations",
+        "zh": "相关研究与基础"
+      },
+      "intro": {
+        "en": "Related studies in digital health, interpretable analytics, and platform behavior provide methodological and contextual foundations for this agenda.",
+        "zh": "数字健康、可解释分析与平台行为等相关研究，为数字心理健康主线提供方法与情境上的基础。"
+      },
+      "count": 10,
+      "groups": [
+        {
+          "title": {
+            "en": "Digital health and care",
+            "zh": "数字健康与照护"
+          },
+          "papers": [
+            {
+              "id": "therapeutics",
+              "label": {
+                "en": "Digital therapeutics and self-management",
+                "zh": "数字疗法与疾病自我管理"
+              }
+            },
+            {
+              "id": "team",
+              "label": {
+                "en": "Physician teams and reputation",
+                "zh": "医生团队与声誉"
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Interpretable health analytics",
+            "zh": "可解释健康分析"
+          },
+          "papers": [
+            {
+              "id": "bayesian",
+              "label": {
+                "en": "LLM-guided Bayesian prediction",
+                "zh": "大语言模型引导的贝叶斯预测"
+              }
+            },
+            {
+              "id": "readmission",
+              "label": {
+                "en": "Interpretable readmission risk",
+                "zh": "可解释再入院风险"
+              }
+            },
+            {
+              "id": "copd",
+              "label": {
+                "en": "Respiratory-sound risk assessment",
+                "zh": "呼吸音与疾病风险评估"
+              }
+            }
+          ]
+        },
+        {
+          "title": {
+            "en": "Digital platforms and institutions",
+            "zh": "数字平台与制度环境"
+          },
+          "papers": [
+            {
+              "id": "crowdfunding",
+              "label": {
+                "en": "Crowdfunding signals",
+                "zh": "众筹项目的信号线索"
+              }
+            },
+            {
+              "id": "commerce",
+              "label": {
+                "en": "Language in livestreaming",
+                "zh": "直播语言与销售表现"
+              }
+            },
+            {
+              "id": "ugc",
+              "label": {
+                "en": "Video UGC popularity",
+                "zh": "视频 UGC 流行度"
+              }
+            },
+            {
+              "id": "hotel",
+              "label": {
+                "en": "Cues in hotel booking",
+                "zh": "酒店预订中的边缘线索"
+              }
+            },
+            {
+              "id": "integrity",
+              "label": {
+                "en": "Research integrity policy",
+                "zh": "科研诚信政策演化"
+              }
+            }
+          ]
+        }
+      ]
+    }
   }
 }
