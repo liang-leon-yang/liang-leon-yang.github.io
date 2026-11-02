@@ -234,27 +234,45 @@
   },
   "pathway": {
     "heading": {
-      "en": "How my research connects",
-      "zh": "研究如何相互关联"
+      "en": "A connected research loop",
+      "zh": "研究如何形成闭环"
     },
     "intro": {
-      "en": "Explore the questions connecting my work on digital behavior, mental health support, health decisions, and trustworthy information.",
-      "zh": "沿着数字行为、心理支持、健康决策与信息可信的问题脉络，了解现有研究之间的联系。"
+      "en": "Digital behavior raises questions about support needs; those needs motivate interpretable health decisions, which depend on trustworthy information. Information quality brings us back to how people engage with digital platforms. Select a part of the loop to explore the related studies.",
+      "zh": "从数字行为中理解支持需求，由需求延伸到可解释的健康决策，再追问决策所依赖的信息是否可信；信息质量又将问题带回人们如何信任、使用和参与数字平台。点击环节，查看相互关联的研究。"
     },
     "nav": {
-      "en": "Explore research connections",
-      "zh": "浏览研究脉络"
+      "en": "Explore the research loop clockwise",
+      "zh": "沿顺时针方向浏览研究闭环"
     },
     "papers_label": {
       "en": "Related studies",
       "zh": "相关研究"
     },
+    "loop": {
+      "eyebrow": {
+        "en": "A shared question",
+        "zh": "共同的问题"
+      },
+      "title": {
+        "en": "AI for digital health",
+        "zh": "面向数字健康的人工智能"
+      },
+      "subtitle": {
+        "en": "People · Decisions · Trust",
+        "zh": "人 · 决策 · 信任"
+      },
+      "connection_label": {
+        "en": "Next connection →",
+        "zh": "连接下一环 →"
+      }
+    },
     "chapters": [
       {
         "id": "platforms",
         "label": {
-          "en": "Platforms",
-          "zh": "数字平台"
+          "en": "Digital behavior",
+          "zh": "数字行为"
         },
         "title": {
           "en": "Digital platforms and human behavior",
@@ -263,6 +281,10 @@
         "bridge": {
           "en": "Understanding how people respond to information",
           "zh": "从人与信息的互动出发"
+        },
+        "connection": {
+          "en": "Online expression and interaction lead to a closer question: what support do people need?",
+          "zh": "由线上表达与互动，进一步追问：人们需要怎样的支持？"
         },
         "summary": {
           "en": "My work on crowdfunding, livestreaming, online video, hotel booking, physician teams, and research integrity examines how information, social cues, and institutional settings relate to behavior. These studies provide an information systems perspective for the health and support questions that follow.",
@@ -316,8 +338,8 @@
       {
         "id": "support",
         "label": {
-          "en": "Support",
-          "zh": "心理支持"
+          "en": "Support needs",
+          "zh": "支持需求"
         },
         "title": {
           "en": "Understanding mental health and support needs",
@@ -326,6 +348,10 @@
         "bridge": {
           "en": "Connecting online behavior with individual support needs",
           "zh": "将线上行为与个体支持需求联系起来"
+        },
+        "connection": {
+          "en": "Understanding individual needs motivates a related question: how can health decisions be supported with interpretable evidence?",
+          "zh": "从理解个体需求，延伸到如何以可解释的证据支持健康决策。"
         },
         "summary": {
           "en": "Social media posts and health questions provide different views of mental health and help-seeking. Depression detection and answer modeling connect with research on implicit support needs; empathetic dialogue work explores how AI can respond to those needs. The links below include conference studies and ongoing manuscripts.",
@@ -386,7 +412,7 @@
       {
         "id": "health",
         "label": {
-          "en": "Decisions",
+          "en": "Health decisions",
           "zh": "健康决策"
         },
         "title": {
@@ -396,6 +422,10 @@
         "bridge": {
           "en": "From understanding needs to explaining health risks",
           "zh": "从理解需求延伸到解释健康风险"
+        },
+        "connection": {
+          "en": "Evidence for a decision also raises a question about its basis: how reliable is the health information people encounter?",
+          "zh": "决策需要证据，也需要追问：人们接触到的健康信息是否可靠？"
         },
         "summary": {
           "en": "A related question is how data and models can support health decisions with understandable evidence. Coronary heart disease prediction, readmission modeling, and respiratory-sound assessment examine risk and model interpretation, while the digital therapeutics review considers technology in disease self-management.",
@@ -435,7 +465,7 @@
       {
         "id": "information",
         "label": {
-          "en": "Integrity",
+          "en": "Information integrity",
           "zh": "信息可信"
         },
         "title": {
@@ -445,6 +475,10 @@
         "bridge": {
           "en": "Health support also depends on reliable information",
           "zh": "健康支持也依赖可靠的信息"
+        },
+        "connection": {
+          "en": "Information quality brings the loop back to platforms: how do credibility and content safety relate to trust, participation, and behavior?",
+          "zh": "信息质量将闭环带回数字平台：可信度与内容安全如何联系到信任、参与和行为？"
         },
         "summary": {
           "en": "Reliable information connects these strands of work. Knowledge-guided multimodal learning and graph-evidence reasoning address mental health misinformation. Child-attentive video analysis studies a related content-safety problem, extending the broader interest in how AI interprets online content and supports its assessment.",

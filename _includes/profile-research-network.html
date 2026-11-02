@@ -5,21 +5,42 @@
     <h2 id="research-network-title">{{ pathway.heading[lang] }}</h2>
     <button class="network-toggle" type="button" aria-pressed="false" data-pause-label="{{ agenda.network.pause[lang] }}" data-play-label="{{ agenda.network.play[lang] }}" hidden><span class="network-toggle-icon" aria-hidden="true">Ⅱ</span><span class="network-toggle-label">{{ agenda.network.pause[lang] }}</span></button>
   </div>
-  <p class="path-intro">{{ pathway.intro[lang] }}</p>
-  <nav class="path-steps" aria-label="{{ pathway.nav[lang] }}">
-    {% for chapter in pathway.chapters %}<a class="path-step" id="path-step-{{ chapter.id }}" href="#path-panel-{{ chapter.id }}"><span class="path-index" aria-hidden="true">0{{ forloop.index }}</span><span class="path-label">{{ chapter.label[lang] }}</span></a>{% endfor %}
-  </nav>
-  <div class="path-panels">
-    {% for chapter in pathway.chapters %}
-    <section class="path-panel" id="path-panel-{{ chapter.id }}" aria-labelledby="path-title-{{ chapter.id }}">
-      <p class="path-bridge">{{ chapter.bridge[lang] }}</p>
-      <h3 id="path-title-{{ chapter.id }}">{{ chapter.title[lang] }}</h3>
-      <p class="path-summary">{{ chapter.summary[lang] }}</p>
-      <h4 class="path-papers-label">{{ pathway.papers_label[lang] }} <span class="count">{{ chapter.papers.size }}</span></h4>
-      <ul class="path-papers">
-        {% for reference in chapter.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
-      </ul>
-    </section>
-    {% endfor %}
+  <p class="path-intro" id="research-loop-intro">{{ pathway.intro[lang] }}</p>
+  <div class="research-loop">
+    <div class="loop-diagram">
+      <svg class="loop-tracks" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+        <defs><marker id="loop-arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="m2 1 4 3-4 3" fill="none" stroke="currentColor" stroke-width="1.25"/></marker></defs>
+        <g fill="none" stroke-width="1.5" marker-end="url(#loop-arrow)">
+          <path class="loop-track" data-loop-edge="0" pathLength="1" d="M220 60 A142 142 0 0 1 340 180"/>
+          <path class="loop-track" data-loop-edge="1" pathLength="1" d="M340 220 A142 142 0 0 1 220 340"/>
+          <path class="loop-track" data-loop-edge="2" pathLength="1" d="M180 340 A142 142 0 0 1 60 220"/>
+          <path class="loop-track" data-loop-edge="3" pathLength="1" d="M60 180 A142 142 0 0 1 180 60"/>
+        </g>
+        <g fill="none" stroke-width="2" aria-hidden="true">
+          <path class="loop-signal" data-loop-edge="0" pathLength="1" d="M220 60 A142 142 0 0 1 340 180"/>
+          <path class="loop-signal" data-loop-edge="1" pathLength="1" d="M340 220 A142 142 0 0 1 220 340"/>
+          <path class="loop-signal" data-loop-edge="2" pathLength="1" d="M180 340 A142 142 0 0 1 60 220"/>
+          <path class="loop-signal" data-loop-edge="3" pathLength="1" d="M60 180 A142 142 0 0 1 180 60"/>
+        </g>
+      </svg>
+      <div class="loop-center"><span>{{ pathway.loop.eyebrow[lang] }}</span><strong>{{ pathway.loop.title[lang] }}</strong><span>{{ pathway.loop.subtitle[lang] }}</span></div>
+      <nav class="path-steps" aria-label="{{ pathway.nav[lang] }}" aria-describedby="research-loop-intro">
+        {% for chapter in pathway.chapters %}<a class="path-step" id="path-step-{{ chapter.id }}" href="#path-panel-{{ chapter.id }}"><span class="path-index" aria-hidden="true">0{{ forloop.index }}</span><span class="path-label">{{ chapter.label[lang] }}</span></a>{% endfor %}
+      </nav>
+    </div>
+    <div class="path-panels">
+      {% for chapter in pathway.chapters %}
+      <section class="path-panel" id="path-panel-{{ chapter.id }}" aria-labelledby="path-title-{{ chapter.id }}">
+        <p class="path-bridge">{{ chapter.bridge[lang] }}</p>
+        <h3 id="path-title-{{ chapter.id }}">{{ chapter.title[lang] }}</h3>
+        <p class="path-summary">{{ chapter.summary[lang] }}</p>
+        <p class="path-connection"><span>{{ pathway.loop.connection_label[lang] }}</span> {{ chapter.connection[lang] }}</p>
+        <h4 class="path-papers-label">{{ pathway.papers_label[lang] }} <span class="count">{{ chapter.papers.size }}</span></h4>
+        <ul class="path-papers">
+          {% for reference in chapter.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
+        </ul>
+      </section>
+      {% endfor %}
+    </div>
   </div>
 </section>

@@ -4,6 +4,7 @@ for (const network of document.querySelectorAll('[data-research-network]')) {
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const steps = [...network.querySelectorAll('.path-step')];
   const panels = [...network.querySelectorAll('.path-panel')];
+  const edges = [...network.querySelectorAll('[data-loop-edge]')];
   const toggle = network.querySelector('.network-toggle');
   const panelGroup = network.querySelector('.path-panels');
   const duration = 8000;
@@ -37,11 +38,11 @@ for (const network of document.querySelectorAll('[data-research-network]')) {
     steps.forEach((step, i) => {
       step.setAttribute('aria-selected', String(i === active));
       step.tabIndex = i === active ? 0 : -1;
-      step.classList.toggle('is-visited', i < active);
       panels[i].classList.toggle('is-active', i === active);
       panels[i].setAttribute('aria-hidden', String(i !== active));
       panels[i].inert = i !== active;
     });
+    edges.forEach(edge => edge.classList.toggle('is-current', Number(edge.dataset.loopEdge) === active));
     updateMotion();
   }
   network.querySelector('.path-steps').setAttribute('role', 'tablist');
@@ -54,8 +55,8 @@ for (const network of document.querySelectorAll('[data-research-network]')) {
     step.addEventListener('click', event => { event.preventDefault(); select(index, true); });
     step.addEventListener('keydown', event => {
       let next;
-      if (event.key === 'ArrowRight') next = (active + 1) % steps.length;
-      else if (event.key === 'ArrowLeft') next = (active + steps.length - 1) % steps.length;
+      if (event.key === 'ArrowRight' || event.key === 'ArrowDown') next = (active + 1) % steps.length;
+      else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') next = (active + steps.length - 1) % steps.length;
       else if (event.key === 'Home') next = 0;
       else if (event.key === 'End') next = steps.length - 1;
       else if (event.key === ' ') next = index;
