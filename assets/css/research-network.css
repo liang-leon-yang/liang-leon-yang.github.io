@@ -58,6 +58,7 @@
 .path-papers { display: grid; grid-template-columns: minmax(0,1fr); gap: 6px 24px; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.6; }
 .path-papers a { overflow-wrap: break-word; }
 .path-papers a > span { display: inline-block; }
+.research-record-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 18px; font-size: 14px; line-height: 1.6; }
 .related-research { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); }
 .related-research > summary { width: fit-content; color: var(--ink); font-size: 15px; font-weight: 600; cursor: pointer; }
 .related-research > summary .count { margin-left: 8px; color: var(--muted); font-size: 12px; font-weight: 400; }

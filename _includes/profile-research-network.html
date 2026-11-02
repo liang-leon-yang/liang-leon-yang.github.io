@@ -1,5 +1,6 @@
 {% assign agenda = site.data.research_agenda %}
 {% assign pathway = agenda.pathway %}
+{% assign research_record_url = prefix | append: '/publications/' | relative_url %}
 <section class="research-network" aria-labelledby="research-network-title" data-research-network>
   <div class="section-heading">
     <h2 id="research-network-title">{{ pathway.heading[lang] }}</h2>
@@ -44,7 +45,7 @@
         <p class="path-connection"><span>{{ pathway.loop.connection_label[lang] }}</span> {{ chapter.connection[lang] }}</p>
         <h4 class="path-papers-label">{{ pathway.papers_label[lang] }} <span class="count">{{ chapter.papers.size }}</span></h4>
         <ul class="path-papers">
-          {% for reference in chapter.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
+          {% for reference in chapter.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="{{ research_record_url }}#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
         </ul>
       </section>
       {% endfor %}
@@ -58,10 +59,11 @@
       <section class="related-group" aria-labelledby="related-group-{{ forloop.index }}">
         <h3 id="related-group-{{ forloop.index }}">{{ group.title[lang] }}</h3>
         <ul class="path-papers related-papers">
-          {% for reference in group.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
+          {% for reference in group.papers %}{% assign linked_paper = p.publications | where: 'id', reference.id | first %}<li><a href="{{ research_record_url }}#paper-{{ linked_paper.id }}" title="{{ linked_paper.title | escape }}">{{ reference.label[lang] }} <span aria-hidden="true">↗</span></a></li>{% endfor %}
         </ul>
       </section>
       {% endfor %}
     </div>
   </details>
+  <a class="research-record-link" href="{{ research_record_url }}">{{ t.all }} <span aria-hidden="true">↗</span></a>
 </section>
