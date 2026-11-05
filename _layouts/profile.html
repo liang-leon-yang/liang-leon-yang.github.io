@@ -79,10 +79,15 @@
       </nav>
       {% for group in groups %}
         {% assign papers = p.publications | where: 'group', group | sort: 'reference_sort' %}
+        {% assign years = papers | map: 'year' | uniq | sort | reverse %}
         {% if papers.size > 0 %}
         <section class="section research-section" id="{{ group }}" aria-labelledby="{{ group }}-title">
           <div class="section-heading"><h2 id="{{ group }}-title">{{ t[group] }}</h2><span class="count" aria-hidden="true">{{ papers.size }}</span></div>
-          <div class="publication-list">{% for paper in papers %}{% include profile-paper.html %}{% endfor %}</div>
+          <div class="publication-list">
+            {% for year in years %}{% assign year_papers = papers | where: 'year', year %}
+              {% for paper in year_papers %}{% include profile-paper.html %}{% endfor %}
+            {% endfor %}
+          </div>
         </section>
         {% endif %}
       {% endfor %}
