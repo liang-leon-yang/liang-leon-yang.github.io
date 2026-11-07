@@ -152,6 +152,7 @@ button { font: inherit; }
 .research-section .paper { margin-bottom: 22px; }
 .paper-reference { padding-left: .5in; text-indent: -.5in; line-height: 2; overflow-wrap: anywhere; }
 .paper-reference em { font-style: italic; }
+.paper-reference .paper-self-author { font-weight: 600; }
 .paper-note { margin: 4px 0 0 .5in; color: var(--muted); font-size: 14px; line-height: 1.6; }
 .paper {
   margin-bottom: 34px;
